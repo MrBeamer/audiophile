@@ -1,0 +1,29 @@
+.home-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* change to max-height: ; */
+  height: 632px;
+  background-color: #000000;
+  /* background-color: #0e0e0e; */
+}
+
+.home-banner__content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-banner__overline {
+  opacity: 0.5;
+}
+
+.home-banner__title {
+}
+
+.home-banner__paragraph {
+  opacity: 0.75;
+}
+
+.home-banner__image {
+  width: 708.8px;
+}

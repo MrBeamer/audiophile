@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+*.sketch
+*.fig
+*.xd
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore

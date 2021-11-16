@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  background-color: #000000;
+  /* background-color: #191919; */
+  border-bottom: 1px solid #ffffff;
+  margin: 0 165px;
+  color: #ffffff;
+}
+
+.nav__nav-links {
+  display: flex;
+  gap: 34px;
+}
+
+.nav__nav-link {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
