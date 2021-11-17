@@ -4,9 +4,9 @@ import "./app.css";
 import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer/Footer";
 import Home from "../pages/Home";
-import Earphones from "../pages/Earphones";
-import Headphones from "../pages/Headphones";
-import Speakers from "../pages/Speakers";
+import CategoryEarphones from "../pages/CategoryEarphones";
+import CategoryHeadphones from "../pages/CategoryHeadphones";
+import CategorySpeakers from "../pages/CategorySpeakers";
 
 function App() {
   return (
@@ -18,9 +18,9 @@ function App() {
         <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/earphones" element={<Earphones />} />
-            <Route path="/headphones" element={<Headphones />} />
-            <Route path="/speakers" element={<Speakers />} />
+            <Route path="/earphones" element={<CategoryEarphones />} />
+            <Route path="/headphones" element={<CategoryHeadphones />} />
+            <Route path="/speakers" element={<CategorySpeakers />} />
           </Routes>
         </main>
         <footer className="footer">

@@ -5,16 +5,13 @@
   justify-content: center;
   position: relative;
   background-color: #f1f1f1;
-  /* max-width: 350px;
-  max-height: 204px; */
-  width: 350px;
   height: 204px;
   border-radius: 8px;
+  flex: 1;
 }
 
 .category-card__image {
   position: absolute;
-  /* max-width: 122px; */
   height: 160px;
   top: -27%;
   left: 0;
@@ -24,9 +21,28 @@
 }
 
 .category-card__title {
-  margin-top: 116px;
+  margin-top: 82px;
   margin-bottom: 15px;
 }
 
 .category-card__link {
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.5;
+  margin-right: 8px;
+}
+
+.category-card__link:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.category-card__icon {
+  width: 7px;
 }

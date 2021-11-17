@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./categoryCard.css";
 
-export default function CategoryCard() {
+export default function CategoryCard(props) {
+  const { title, imagePath } = props;
   return (
     <div className="category-card">
-      <img
-        className="category-card__image"
-        src="/images/shared/desktop/image-category-thumbnail-headphones.png"
-        alt="headphones"
-      />
-      <h6 className="category-card__title">Headphones</h6>
+      <img className="category-card__image" src={imagePath} alt="headphones" />
+      <h6 className="category-card__title">{title}</h6>
       <div>
-        <span className="category-card__link">Shop </span>
+        <Link to={`/${title}`} className="category-card__link">
+          Shop
+        </Link>
         <img
+          className="category-card__icon"
           src="/images/shared/desktop/icon-arrow-right.svg"
           alt="orange arrow right"
         />
