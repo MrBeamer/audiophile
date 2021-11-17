@@ -1,16 +1,19 @@
 .home-banner {
+  padding: 0 165px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* change to max-height: ; */
   height: 632px;
-  background-color: #000000;
-  /* background-color: #0e0e0e; */
+  /* background-color: #000000; */
+  background-color: #0e0e0e;
 }
 
 .home-banner__content {
   color: #fff;
   display: flex;
   flex-direction: column;
+  margin: 128px 0 158px 0;
+  max-width: 398px;
 }
 
 .home-banner__overline {
@@ -22,8 +25,10 @@
 
 .home-banner__paragraph {
   opacity: 0.75;
+  max-width: 349px;
+  margin-bottom: 40px;
 }
 
 .home-banner__image {
-  width: 708.8px;
+  max-width: 708.8px;
 }

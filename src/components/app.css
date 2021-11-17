@@ -3,6 +3,8 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
+  font-style: normal;
+  letter-spacing: 0px;
 }
 
 h1 {
@@ -37,6 +39,42 @@ h5 {
 h6 {
   font-size: 18px;
   text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.container {
+  margin: 0 165px;
+}
+
+.btn {
+  height: 48px;
+  width: 160px;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #000000;
+}
+
+.btn--black {
+  background-color: #000000;
+  color: #fff;
+}
+
+.btn--orange {
+  background: #d87d4a;
+  color: #fff;
 }
 
 .overline {
@@ -53,7 +91,8 @@ h6 {
 }
 
 .header {
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-color: #0e0e0e;
 }
 
 .main {

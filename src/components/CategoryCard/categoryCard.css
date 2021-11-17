@@ -1,0 +1,32 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f1f1f1;
+  /* max-width: 350px;
+  max-height: 204px; */
+  width: 350px;
+  height: 204px;
+  border-radius: 8px;
+}
+
+.category-card__image {
+  position: absolute;
+  /* max-width: 122px; */
+  height: 160px;
+  top: -27%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-card__title {
+  margin-top: 116px;
+  margin-bottom: 15px;
+}
+
+.category-card__link {
+}
