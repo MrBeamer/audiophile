@@ -93,6 +93,7 @@ h6 {
 .btn--outline {
   background-color: transparent;
   color: #000000;
+  border: 1px solid #000000;
 }
 
 .btn--orange {

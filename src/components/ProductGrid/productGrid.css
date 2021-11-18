@@ -2,10 +2,58 @@
   width: 1100px;
 }
 
-.product__ZX9 {
+.product-ZX9 {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 560px;
   background-color: #d87d4a;
 }
+
+.product-ZX9__container {
+  position: relative;
+  justify-self: end;
+  margin-top: 78px;
+}
+
+.product-ZX9__image {
+  position: relative;
+  max-width: 410px;
+  justify-self: center;
+  z-index: 4;
+}
+
+.product-ZX9__circles {
+  position: absolute;
+  top: -16%;
+  left: -65%;
+  right: 0;
+  z-index: 1;
+  /* max-width: 472px; */
+}
+
+.product-ZX9__content {
+  justify-self: center;
+  margin-top: 100px;
+  z-index: 1;
+}
+
+.product-ZX9__title {
+  font: size 56px;
+  color: #fff;
+  max-width: 261px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+.product-ZX9__paragraph {
+  max-width: 349px;
+}
+
+/* Product ZX7 */
+
 .product__ZX7 {
   height: 320px;
   background-color: #979797;
