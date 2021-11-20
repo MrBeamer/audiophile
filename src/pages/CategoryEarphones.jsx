@@ -1,5 +1,6 @@
 import React from "react";
+import CategoryBanner from "../components/CategoryBanner/CategoryBanner";
 
 export default function CategoryEarphones() {
-  return <h1>Earphones</h1>;
+  return <CategoryBanner title="EARPHONES" />;
 }

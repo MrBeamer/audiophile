@@ -12,10 +12,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <header className="header">
+        <header>
           <Navigation />
         </header>
-        <main className="main">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/earphones" element={<CategoryEarphones />} />
@@ -23,8 +23,8 @@ function App() {
             <Route path="/speakers" element={<CategorySpeakers />} />
           </Routes>
         </main>
-        <footer className="footer">
-          <Footer></Footer>;
+        <footer>
+          <Footer></Footer>
         </footer>
       </div>
     </BrowserRouter>

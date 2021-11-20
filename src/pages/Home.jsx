@@ -2,6 +2,7 @@ import React from "react";
 import HomeBanner from "../components/HomeBanner/HomeBanner";
 import CategoryCards from "../components/CategoryCards/CategoryCards";
 import ProductGrid from "../components/ProductGrid/ProductGrid";
+import ShopIntro from "../components/ShopIntro/ShopIntro";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="container">
         <CategoryCards style={{ marginTop: "120px", marginBottom: "168px" }} />
         <ProductGrid />
+        <ShopIntro />
       </div>
     </>
   );

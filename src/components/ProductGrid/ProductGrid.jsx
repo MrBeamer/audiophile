@@ -23,11 +23,24 @@ export default function ProductGrid() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
+          <button className="btn btn--black">SEE PRODUCT</button>
+        </div>
+      </div>
+      <div className="product-ZX7">
+        <div className="product-ZX7__content">
+          <h2 className="product-ZX7__title">ZX7 SPEAKER</h2>
           <button className="btn btn--outline">SEE PRODUCT</button>
         </div>
       </div>
-      <div className="product__ZX7"></div>
-      <div className="product__YX1"></div>
+      <div className="product-YX1">
+        <div className="product-YX1__image"></div>
+        <div className="product-YX1__content">
+          <div className="product-YX1__align--left">
+            <h2 className="product-YX1__title">YX1SPEAKER</h2>
+            <button className="btn btn--outline">SEE PRODUCT</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

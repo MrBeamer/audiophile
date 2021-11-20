@@ -1,5 +1,6 @@
 import React from "react";
+import CategoryBanner from "../components/CategoryBanner/CategoryBanner";
 
 export default function CategorySpeakers() {
-  return <h1>Speakers</h1>;
+  return <CategoryBanner title="Speakers" />;
 }
