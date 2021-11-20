@@ -1,0 +1,17 @@
+.productCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.productCard__image-frame {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  height: 540px;
+}
+
+.productCard__image {
+  height: 200px;
+}
+
+.productCard__content {
+}

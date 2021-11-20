@@ -31,13 +31,13 @@ export default function Footer() {
       </div>
       <ul className="footer__social-links">
         <li>
-          <i class="fab fa-facebook-square"></i>
+          <i className="fab fa-facebook-square"></i>
         </li>
         <li>
-          <i class="fab fa-twitter-square"></i>
+          <i className="fab fa-twitter-square"></i>
         </li>
         <li>
-          <i class="fab fa-instagram-square"></i>
+          <i className="fab fa-instagram-square"></i>
         </li>
       </ul>
     </div>

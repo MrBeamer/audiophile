@@ -16,17 +16,8 @@
   max-width: 398px;
 }
 
-.home-banner__overline {
-  opacity: 0.5;
-}
-
 .home-banner__title {
-}
-
-.home-banner__paragraph {
-  opacity: 0.75;
-  max-width: 349px;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .home-banner__image {
