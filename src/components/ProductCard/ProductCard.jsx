@@ -5,13 +5,23 @@ import ProductHeadline from "../TextElements/ProductHeadline";
 import Paragraph from "../TextElements/Paragraph";
 
 export default function ProductCard(props) {
-  const { imgPath, title, paragraph, price = "1300$" } = props;
+  const { imgPath, title, paragraph, price = "1300$", styles = "" } = props;
+  // const imgRight = right ?  "right": { gridColumn: "2" }, : {};
+  // const textLeft = left ? { gridColumn: "1", gridRow: "1" } : {};
+
+  const customStyles = styles
+    ? { right: { gridColumn: "2" }, left: { gridColumn: "1", gridRow: "1" } }
+    : {};
+  console.log(customStyles);
+  console.log(customStyles.right);
+  console.log(customStyles.left);
+
   return (
     <div className="productCard">
-      <div className="productCard__image-frame">
+      <div style={customStyles.right} className="productCard__image-frame">
         <img className="productCard__image" src={imgPath} alt="" />
       </div>
-      <div className="productCard__content">
+      <div style={customStyles.left} className="productCard__content">
         <Overline />
         <ProductHeadline>{title}</ProductHeadline>
         <Paragraph>{paragraph}</Paragraph>

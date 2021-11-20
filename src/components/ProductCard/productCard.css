@@ -1,17 +1,24 @@
 .productCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 125px;
+  margin-bottom: 160px;
 }
 
 .productCard__image-frame {
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  height: 540px;
+  width: 540px;
+  height: 560px;
+  /* grid-column: 2; */
 }
 
 .productCard__image {
-  height: 200px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .productCard__content {
+  display: grid;
+  align-content: center;
+  /* grid-column: 1;
+  grid-row: 1; */
 }
