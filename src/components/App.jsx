@@ -7,8 +7,16 @@ import Home from "../pages/Home";
 import CategoryEarphones from "../pages/CategoryEarphones";
 import CategoryHeadphones from "../pages/CategoryHeadphones";
 import CategorySpeakers from "../pages/CategorySpeakers";
+import ProductDetailHeadphones from "../pages/ProductDetailHeadphones";
+import products from "../products.json";
+
+// var data = fs.readFileSync("words.json", "utf8");
+// var products = JSON.parse(data);
+// console.log(products);
 
 function App() {
+  console.log(products);
+  console.log(products.id);
   return (
     <BrowserRouter>
       <div className="app">
@@ -21,6 +29,10 @@ function App() {
             <Route path="/earphones" element={<CategoryEarphones />} />
             <Route path="/headphones" element={<CategoryHeadphones />} />
             <Route path="/speakers" element={<CategorySpeakers />} />
+            <Route
+              path="/headphones/xx99-mark-ii"
+              element={<ProductDetailHeadphones />}
+            />
           </Routes>
         </main>
         <footer>

@@ -34,3 +34,32 @@
   background-color: #000000;
   color: #fff;
 }
+
+.quantity-button {
+  display: flex;
+  height: 48px;
+  width: 120px;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+.quantity-button--increase,
+.quantity-button--decrease {
+  opacity: 0.25;
+  margin: 0 15px;
+  font-size: 15px;
+}
+
+.quantity-button--increase:hover,
+.quantity-button--decrease:hover {
+  cursor: pointer;
+  color: #d87d4a;
+}

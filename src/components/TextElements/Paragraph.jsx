@@ -18,6 +18,6 @@ export default function Paragraph(props) {
     opacity: opacity,
     margin: margin,
   };
-  console.log(styles);
+  // console.log(styles);
   return <p style={styles}>{children}</p>;
 }

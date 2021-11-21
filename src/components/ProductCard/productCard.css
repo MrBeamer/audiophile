@@ -19,3 +19,15 @@
   display: grid;
   align-content: center;
 }
+
+.productCard__buttons {
+  display: flex;
+  gap: 20px;
+}
+.productCard__price {
+  margin: 0 0 46px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+}

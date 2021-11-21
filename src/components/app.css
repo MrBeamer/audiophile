@@ -11,6 +11,10 @@ body {
   margin: 0 165px;
 }
 
+.container--productDetail {
+  margin: 160px 165px 0 165px;
+}
+
 .app {
   max-width: 1440px;
   margin: 0 auto;
@@ -45,7 +49,12 @@ h2 {
 }
 
 h3 {
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
   font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
   text-transform: uppercase;
 }
 
@@ -76,37 +85,30 @@ h6 {
   letter-spacing: 10px;
 }
 
-/* Buttons */
-
-.btn {
-  height: 48px;
-  width: 160px;
-  font-size: 13px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
+.productDetail__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 180px;
 }
 
-.btn--outline {
-  background-color: transparent;
-  color: #000000;
-  border: 1px solid #000000;
+.accessories {
+  justify-self: center;
+  margin-top: 10px;
 }
 
-.btn--orange {
-  background-color: #d87d4a;
-  color: #fff;
+.accessories__element {
+  display: flex;
+  gap: 24px;
 }
 
-.btn--orange:hover {
-  background-color: #fbaf85;
+.accessories__title {
+  margin-bottom: 32px;
 }
 
-.btn--outline:hover {
-  background-color: #000000;
-  color: #fff;
+.accessories__quantity {
+  color: #d87d4a;
+}
+
+.accessories_name {
+  opacity: 0.5;
 }
