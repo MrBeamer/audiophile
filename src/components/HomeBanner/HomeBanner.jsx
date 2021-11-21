@@ -2,6 +2,7 @@ import React from "react";
 import "./homeBanner.css";
 import Paragraph from "../TextElements/Paragraph";
 import Overline from "../TextElements/Overline";
+import Button from "../Button/Button";
 
 export default function HomeBanner() {
   return (
@@ -21,7 +22,7 @@ export default function HomeBanner() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </Paragraph>
-        <button className="btn btn--orange">See Product</button>
+        <Button backgroundColor="orange">See Product</Button>
       </div>
       <img
         className="home-banner__image"

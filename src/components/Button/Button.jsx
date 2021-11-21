@@ -1,5 +1,20 @@
 import React from "react";
+import clsx from "clsx";
+import { Link } from "react-router-dom";
+import "./button.css";
 
-// export default function Button() {
-//   return <button onClick={this.}></button>;
-// }
+export default function Button(props) {
+  const { linkTo = "#", children, backgroundColor } = props;
+
+  const customClass = clsx({
+    "btn--orange": backgroundColor === "orange",
+    "btn--outline": backgroundColor === "outline",
+    "btn--black": backgroundColor === "black",
+  });
+
+  return (
+    <Link to={linkTo} className={`btn ${customClass}`}>
+      {children}
+    </Link>
+  );
+}

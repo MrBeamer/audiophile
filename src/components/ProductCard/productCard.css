@@ -8,7 +8,6 @@
 .productCard__image-frame {
   width: 540px;
   height: 560px;
-  /* grid-column: 2; */
 }
 
 .productCard__image {
@@ -19,6 +18,4 @@
 .productCard__content {
   display: grid;
   align-content: center;
-  /* grid-column: 1;
-  grid-row: 1; */
 }

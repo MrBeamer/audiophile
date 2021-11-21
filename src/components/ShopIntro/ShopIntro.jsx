@@ -1,15 +1,16 @@
 import React from "react";
 import Paragraph from "../TextElements/Paragraph";
 import "./shopIntro.css";
+import ProductHeadline from "../TextElements/ProductHeadline";
 
 export default function ShopIntro(props) {
   const { styles = { margin: "160px 0" } } = props;
   return (
     <div style={styles} className="intro">
       <div className="intro__content">
-        <h2 className="intro__title">
+        <ProductHeadline>
           Bringing you the <span>best</span> audio gear
-        </h2>
+        </ProductHeadline>
         <Paragraph>
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.

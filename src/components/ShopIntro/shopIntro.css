@@ -14,17 +14,6 @@
   align-self: center;
 }
 
-.intro__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 44px;
-  letter-spacing: 1.42857px;
-  text-transform: uppercase;
-  color: #000000;
-  margin-bottom: 32px;
-}
-
-.intro__title span {
+span {
   color: #d87d4a;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./productGrid.css";
+import Button from "../Button/Button";
 
 export default function ProductGrid() {
   return (
@@ -23,13 +24,13 @@ export default function ProductGrid() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <button className="btn btn--black">SEE PRODUCT</button>
+          <Button backgroundColor="black">See Product</Button>
         </div>
       </div>
       <div className="product-ZX7">
         <div className="product-ZX7__content">
           <h2 className="product-ZX7__title">ZX7 SPEAKER</h2>
-          <button className="btn btn--outline">SEE PRODUCT</button>
+          <Button backgroundColor="outline">See Product</Button>
         </div>
       </div>
       <div className="product-YX1">
@@ -37,7 +38,7 @@ export default function ProductGrid() {
         <div className="product-YX1__content">
           <div className="product-YX1__align--left">
             <h2 className="product-YX1__title">YX1SPEAKER</h2>
-            <button className="btn btn--outline">SEE PRODUCT</button>
+            <Button backgroundColor="outline">See Product</Button>
           </div>
         </div>
       </div>

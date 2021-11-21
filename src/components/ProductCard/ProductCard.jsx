@@ -3,11 +3,10 @@ import "./productCard.css";
 import Overline from "../TextElements/Overline";
 import ProductHeadline from "../TextElements/ProductHeadline";
 import Paragraph from "../TextElements/Paragraph";
+import Button from "../Button/Button";
 
 export default function ProductCard(props) {
-  const { imgPath, title, paragraph, price = "1300$", styles = "" } = props;
-  // const imgRight = right ?  "right": { gridColumn: "2" }, : {};
-  // const textLeft = left ? { gridColumn: "1", gridRow: "1" } : {};
+  const { imgPath, title, paragraph, styles = "" } = props;
 
   const customStyles = styles
     ? { right: { gridColumn: "2" }, left: { gridColumn: "1", gridRow: "1" } }
@@ -24,9 +23,8 @@ export default function ProductCard(props) {
       <div style={customStyles.left} className="productCard__content">
         <Overline />
         <ProductHeadline>{title}</ProductHeadline>
-        <Paragraph>{paragraph}</Paragraph>
-        {/* <p>{price}</p> */}
-        <button className="btn btn--orange">See Product</button>
+        <Paragraph margin="32px 0 38px 0">{paragraph}</Paragraph>
+        <Button backgroundColor="orange">See Product</Button>
       </div>
     </div>
   );
