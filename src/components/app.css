@@ -85,6 +85,7 @@ h6 {
   letter-spacing: 10px;
 }
 
+/* needs on place or file html code is in productHeadphones page */
 .productDetail__features {
   display: grid;
   grid-template-columns: 1fr 1fr;

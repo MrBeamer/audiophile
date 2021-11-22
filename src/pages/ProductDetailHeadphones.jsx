@@ -4,6 +4,7 @@ import CategoryCards from "../components/CategoryCards/CategoryCards";
 import Paragraph from "../components/TextElements/Paragraph";
 import ShopIntro from "../components/ShopIntro/ShopIntro";
 import ProductGallery from "../components/ProductGallery/ProductGallery";
+import Recommendation from "../components/Recommendation/Recommendation";
 
 export default function ProductDetailHeadphones() {
   const customStyles = {};
@@ -60,6 +61,7 @@ export default function ProductDetailHeadphones() {
         </div>
       </div>
       <ProductGallery />
+      <Recommendation />
       <CategoryCards style={{ marginTop: "0", marginBottom: "0" }} />
       <ShopIntro />
     </div>
