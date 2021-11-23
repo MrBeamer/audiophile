@@ -5,15 +5,7 @@ import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer/Footer";
 import Home from "../pages/Home";
 import CategoryPage from "../pages/CategoryPage";
-import CategoryHeadphones from "../pages/CategoryHeadphones";
-import CategorySpeakers from "../pages/CategorySpeakers";
-import ProductDetail from "../pages/ProductDetail";
-import products from "../products.json";
-
-// var data = fs.readFileSync("words.json", "utf8");
-// var products = JSON.parse(data);
-console.log(products);
-console.log(products.headphones);
+import ProductDetailPage from "../pages/ProductDetailPage";
 
 function App() {
   return (
@@ -26,9 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:category" element={<CategoryPage />} />
-            {/* <Route path="/headphones" element={<CategoryHeadphones />} />
-            <Route path="/speakers" element={<CategorySpeakers />} />
-            <Route path="/:category/:product" element={<ProductDetail />} /> */}
+            <Route path="/:category/:product" element={<ProductDetailPage />} />
           </Routes>
         </main>
         <footer>

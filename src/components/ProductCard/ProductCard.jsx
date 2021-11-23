@@ -34,7 +34,7 @@ export default function ProductCard(props) {
         <div className="productCard__buttons">
           {detailPage && <QuantityButton />}
           <Button linkTo={linkTo} backgroundColor="orange">
-            See Product
+            {detailPage ? "Add to cart" : "See Product"}
           </Button>
         </div>
       </div>

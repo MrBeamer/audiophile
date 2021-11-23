@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import CategoryBanner from "../components/CategoryBanner/CategoryBanner";
 import ProductCard from "../components/ProductCard/ProductCard";
@@ -17,7 +17,6 @@ export default function CategoryPage() {
   //   //use square brackets to access property of an object with a string/ dynamic variable
   //   setCategory(products[params.category]);
   // }, [params.category]);
-  console.log(category);
   return (
     <>
       <CategoryBanner title={params.category} />
@@ -25,8 +24,9 @@ export default function CategoryPage() {
         {category.map((product) => (
           <ProductCard
             key={product.id}
-            styles={product.id === 2 ? "mirrored" : ""}
+            styles={product.position === "mirrored" ? "mirrored" : ""}
             imgPath={product.image.category}
+            linkTo={`/${params.category}/${product.name.split(` `).join(`-`)}`}
             title={`${product.name} ${product.category} `}
             paragraph={product.description}
           />
@@ -37,6 +37,3 @@ export default function CategoryPage() {
     </>
   );
 }
-
-// ids anpassen
-// und mirrored property hinzufugen
