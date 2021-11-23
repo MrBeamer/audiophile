@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 import ProductCard from "../components/ProductCard/ProductCard";
 import CategoryCards from "../components/CategoryCards/CategoryCards";
 import Paragraph from "../components/TextElements/Paragraph";
@@ -6,7 +8,9 @@ import ShopIntro from "../components/ShopIntro/ShopIntro";
 import ProductGallery from "../components/ProductGallery/ProductGallery";
 import Recommendation from "../components/Recommendation/Recommendation";
 
-export default function ProductDetailHeadphones() {
+export default function ProductDetail() {
+  const params = useParams();
+  console.log(params);
   const customStyles = {};
 
   return (

@@ -21,8 +21,6 @@ export default function ProductCard(props) {
     ? { right: { gridColumn: "2" }, left: { gridColumn: "1", gridRow: "1" } }
     : {};
 
-  console.log(linkTo);
-
   return (
     <div className="productCard">
       <div style={customStyles.right} className="productCard__image-frame">
