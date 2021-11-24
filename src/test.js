@@ -24,3 +24,60 @@ export const products = [
 // yx1
 // zx7
 // zx9
+
+
+<>
+<CategoryBanner title={params.category} />
+<div className="container">
+  {category.map((product) => (
+    <ProductCard
+      key={product.id}
+      styles={product.position === "mirrored" ? "mirrored" : ""}
+      imgPath={product.image.category}
+      linkTo={`/${params.category}/${product.name.split(` `).join(`-`)}`}
+      title={`${product.name} ${product.category} `}
+      paragraph={product.description}
+    />
+  ))}
+  <CategoryCards style={{ marginTop: "0", marginBottom: "0" }} />
+  <ShopIntro />
+</div>
+</>
+
+
+  <ProductCard
+        imgPath={product.image?.product}
+        title={`${product.name} ${product.category}`}
+        paragraph={product.description}
+        detailPage={true}
+        onProductAdd={onProductAdd}
+        price={product.price}
+      />
+
+
+
+  <div className="productCard">
+      <div style={customStyles.right} className="productCard__image-frame">
+        <img
+          className="productCard__image"
+          src={imgPath}
+          alt=""
+        />
+      </div>
+      <div style={customStyles.left} className="productCard__content">
+        <Overline />
+        <ProductHeadline>{title}</ProductHeadline>
+        <Paragraph margin="32px 0 38px 0">{paragraph}</Paragraph>
+        {detailPage && <p className="productCard__price">{price}</p>}
+        <div className="productCard__buttons">
+          {detailPage && <QuantityButton />}
+          <Button
+            onClick={() => onProductAdd()}
+            linkTo={linkTo}
+            backgroundColor="orange"
+          >
+            {detailPage ? "Add to cart" : "See Product"}
+          </Button>
+        </div>
+      </div>
+    </div>

@@ -25,10 +25,8 @@ export default function CategoryPage() {
           <ProductCard
             key={product.id}
             styles={product.position === "mirrored" ? "mirrored" : ""}
-            imgPath={product.image.category}
             linkTo={`/${params.category}/${product.name.split(` `).join(`-`)}`}
-            title={`${product.name} ${product.category} `}
-            paragraph={product.description}
+            product={product}
           />
         ))}
         <CategoryCards style={{ marginTop: "0", marginBottom: "0" }} />

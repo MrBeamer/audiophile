@@ -1,8 +1,7 @@
 import React from "react";
 import "./productGallery.css";
 
-export default function ProductGallery(props) {
-  const { product } = props;
+export default function ProductGallery({ product }) {
   return (
     <div className="productGallery">
       <img

@@ -9,13 +9,13 @@ import ProductGallery from "../components/ProductGallery/ProductGallery";
 import Recommendation from "../components/Recommendation/Recommendation";
 import products from "../products.json";
 
-export default function ProductDetailPage() {
+export default function ProductDetailPage(props) {
   const params = useParams();
   const category = products[params.category];
   const productName = params.product;
   const [product, setProduct] = useState({});
-  console.log(params);
-  console.log(category);
+  const { onProductAdd, onProductDelete, onProductQuantityChange, quantity } =
+    props;
 
   useEffect(() => {
     const currentProduct = category.find(
@@ -28,10 +28,11 @@ export default function ProductDetailPage() {
   return (
     <div className="container--productDetail">
       <ProductCard
-        imgPath={product.image?.product}
-        title={`${product.name} ${product.category}`}
-        paragraph={product.description}
+        product={product}
         detailPage={true}
+        onProductAdd={onProductAdd}
+        onProductQuantityChange={onProductQuantityChange}
+        quantity={quantity}
       />
 
       <div className="productDetail__features">

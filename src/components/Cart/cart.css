@@ -1,0 +1,36 @@
+.cart-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 9;
+}
+
+.cart {
+  position: absolute;
+  top: 128px;
+  right: 163px;
+  width: 377px;
+  height: 488px;
+  /* background-color: #fff; */
+  background-color: red;
+  display: grid;
+  /* justify-items: space-between; */
+  padding: 31px 32px;
+  z-index: 10;
+}
+
+.cart__quantity-control,
+.cart__total {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__item--image {
+  width: 65px;
+}

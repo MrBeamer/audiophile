@@ -3,6 +3,33 @@ import "./recommendation.css";
 import Button from "../Button/Button";
 
 export default function Recommendation() {
+  function randomImg() {
+    const images = [
+      {
+        name: "xx99 mark i",
+        image: "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
+      },
+      {
+        name: "xx99 mark ii",
+        image: "/images/shared/desktop/image-xx99-mark-two-headphones.jpg",
+      },
+      {
+        name: "xx59",
+        image: "/images/shared/desktop/image-xx59-headphones.jpg",
+      },
+      {
+        name: "zx9",
+        image: "/images/shared/desktop/image-zx9-speaker.jpg",
+      },
+      {
+        name: "zx7",
+        image: "/images/shared/desktop/image-zx7-speaker.jpg",
+      },
+    ];
+    const randomImg = images[Math.floor(Math.random() * images.length)];
+    console.log(randomImg);
+  }
+
   return (
     <div className="recommendation">
       <h2 className="recommendation__title">You may also like</h2>

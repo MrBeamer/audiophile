@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./button.css";
 
 export default function Button(props) {
-  const { linkTo = "#", children, backgroundColor } = props;
+  const { linkTo = "#", children, backgroundColor, ...rest } = props;
   // console.log(linkTo);
 
   const customClass = clsx({
@@ -14,7 +14,7 @@ export default function Button(props) {
   });
 
   return (
-    <Link to={linkTo} className={`btn ${customClass}`}>
+    <Link to={linkTo} className={`btn ${customClass}`} {...rest}>
       {children}
     </Link>
   );

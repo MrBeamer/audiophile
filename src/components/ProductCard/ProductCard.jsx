@@ -9,12 +9,12 @@ import QuantityButton from "../Button/QuantityButton";
 export default function ProductCard(props) {
   const {
     linkTo,
-    imgPath,
-    title,
-    paragraph,
     styles = "",
     detailPage = false,
-    price = "$ 1,499",
+    onProductAdd = () => {},
+    onProductQuantityChange,
+    quantity,
+    product,
   } = props;
 
   const customStyles = styles
@@ -24,16 +24,29 @@ export default function ProductCard(props) {
   return (
     <div className="productCard">
       <div style={customStyles.right} className="productCard__image-frame">
-        <img className="productCard__image" src={imgPath} alt="" />
+        <img
+          className="productCard__image"
+          src={product.image?.product}
+          alt={`${product.name} ${product.category}`}
+        />
       </div>
       <div style={customStyles.left} className="productCard__content">
         <Overline />
-        <ProductHeadline>{title}</ProductHeadline>
-        <Paragraph margin="32px 0 38px 0">{paragraph}</Paragraph>
-        {detailPage && <p className="productCard__price">{price}</p>}
+        <ProductHeadline>{`${product.name} ${product.category}`}</ProductHeadline>
+        <Paragraph margin="32px 0 38px 0">{product.description}</Paragraph>
+        {detailPage && <p className="productCard__price">{product.price}</p>}
         <div className="productCard__buttons">
-          {detailPage && <QuantityButton />}
-          <Button linkTo={linkTo} backgroundColor="orange">
+          {detailPage && (
+            <QuantityButton
+              quantity={quantity}
+              onProductQuantityChange={onProductQuantityChange}
+            />
+          )}
+          <Button
+            onClick={() => onProductAdd(product)}
+            linkTo={linkTo}
+            backgroundColor="orange"
+          >
             {detailPage ? "Add to cart" : "See Product"}
           </Button>
         </div>
