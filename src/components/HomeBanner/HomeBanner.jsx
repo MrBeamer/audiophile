@@ -22,7 +22,9 @@ export default function HomeBanner() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </Paragraph>
-        <Button backgroundColor="orange">See Product</Button>
+        <Button linkTo="headphones/xx99-mark-ii" backgroundColor="orange">
+          See Product
+        </Button>
       </div>
       <img
         className="home-banner__image"

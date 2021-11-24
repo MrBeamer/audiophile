@@ -1,24 +1,25 @@
 import React from "react";
 import "./productGallery.css";
 
-export default function ProductGallery() {
+export default function ProductGallery(props) {
+  const { product } = props;
   return (
     <div className="productGallery">
       <img
         className="productGallery__img--1"
-        src="/images/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg"
-        alt=""
+        src={product.image?.gallery1}
+        alt={`${product.name} ${product.category} `}
       />
       <img
         className="productGallery__img--2"
-        src="/images/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg"
-        alt=""
+        src={product.image?.gallery2}
+        alt={`${product.name} ${product.category} `}
       />
 
       <img
         className="productGallery__img--3"
-        src="/images/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg"
-        alt=""
+        src={product.image?.gallery3}
+        alt={`${product.name} ${product.category} `}
       />
     </div>
   );

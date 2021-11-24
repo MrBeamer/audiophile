@@ -63,10 +63,14 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </div>
-      <ProductGallery />
+      <ProductGallery product={product} />
       <Recommendation />
       <CategoryCards style={{ marginTop: "0", marginBottom: "0" }} />
       <ShopIntro />
     </div>
   );
 }
+
+//fix br in feature text and find out how to fix random jumps when clicking on links from routers
+// build cart
+// fix the product gallery and the in the box components
