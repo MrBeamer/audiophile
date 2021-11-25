@@ -8,6 +8,7 @@ import Footer from "./Footer/Footer";
 import Home from "../pages/Home";
 import CategoryPage from "../pages/CategoryPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
+import CheckoutPage from "../pages/CheckoutPage";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 // const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
@@ -15,10 +16,8 @@ function App() {
   const [show, setShow] = useState(false);
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
-
-  function handleCartClick() {
+  function handleShowCart() {
     setShow((prevState) => !prevState);
-    console.log("click");
   }
 
   function handleProductQuantityChange(event) {
@@ -52,6 +51,7 @@ function App() {
 
     setQuantity(1);
   }
+
   // const test = { ...product, quantity: quantity };
   // console.log(test);
   // console.log("Adding product " + newProduct.id);
@@ -69,9 +69,8 @@ function App() {
       <ScrollToTop />
       <div className="app">
         <header>
-          <Navigation cart={cart} onCartClick={handleCartClick} />
-          <Cart cart={cart} show={show} />
-          {/* <div className="mask"></div> */}
+          <Navigation cart={cart} onCartClick={handleShowCart} />
+          <Cart cart={cart} show={show} onCartClick={handleShowCart} />
         </header>
         <main>
           <Routes>
@@ -89,6 +88,7 @@ function App() {
                 />
               }
             />
+            <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
           </Routes>
         </main>
         <footer>

@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 
 export default function QuantityButton(props) {
-  const { onProductQuantityChange, quantity = "1" } = props;
+  const { onProductQuantityChange, quantity = "1", children, ...rest } = props;
   // const [quantity, setQuantity] = useState(1);
 
   // function handleProductQuantityChange(event) {
@@ -14,7 +14,7 @@ export default function QuantityButton(props) {
   // }
 
   return (
-    <div className="quantity-button">
+    <div className="quantity-button" {...rest}>
       <p
         onClick={onProductQuantityChange}
         className="quantity-button--decrease"
@@ -22,7 +22,7 @@ export default function QuantityButton(props) {
       >
         -
       </p>
-      <p className="quantity-button__text">{quantity}</p>
+      <p className="quantity-button__text">{children ? children : quantity}</p>
       <p
         onClick={onProductQuantityChange}
         className="quantity-button--increase"

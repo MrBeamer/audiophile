@@ -3,10 +3,10 @@
     {
       "id": 1,
       "name": "xx99 mark i",
-      "cartName": "xx99 mk i",
+      "shortName": "xx99 mk i",
       "category": "headphones",
       "price_id": "price_1JzRNjGQ9nm0CiBqsXuVVAgx",
-      "price": "1.750",
+      "price": 1750,
       "image": {
         "category": "images/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
         "product": "/images/product-xx99-mark-one-headphones/desktop/image-product.jpg",
@@ -24,9 +24,10 @@
       "id": 2,
       "position": "mirrored",
       "name": "xx99 mark ii",
+      "shortName": "xx99 mk ii",
       "category": "headphones",
       "price_id": "price_1JzRN1GQ9nm0CiBqTwJQzhFd",
-      "price": "2.999",
+      "price": 2999,
       "image": {
         "category": "images/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg",
         "product": "/images/product-xx99-mark-two-headphones/desktop/image-product.jpg",
@@ -43,9 +44,10 @@
     {
       "id": 3,
       "name": "xx59",
+      "shortName": "xx59",
       "category": "headphones",
       "price_id": "price_1JzROHGQ9nm0CiBqBncXTY0F",
-      "price": "899",
+      "price": 899,
       "image": {
         "category": "images/product-xx59-headphones/desktop/image-category-page-preview.jpg",
         "product": "/images/product-xx59-headphones/desktop/image-product.jpg",
@@ -64,9 +66,10 @@
     {
       "id": 3,
       "name": "yx1 wireless",
+      "shortName": "yx1",
       "category": "earphones",
       "price_id": "price_1JzRR9GQ9nm0CiBqTMl26eEE",
-      "price": "599",
+      "price": 599,
       "image": {
         "category": "/images/product-yx1-earphones/desktop/image-category-page-preview.jpg",
         "product": "/images/product-yx1-earphones/desktop/image-product.jpg",
@@ -85,9 +88,10 @@
     {
       "id": 4,
       "name": "zx9",
+      "shortName": "zx9",
       "category": "speaker",
       "price_id": "price_1JzRP8GQ9nm0CiBqOEHkUuvW",
-      "price": "4.500",
+      "price": 4500,
       "image": {
         "category": "images/product-zx9-speaker/desktop/image-category-page-preview.jpg",
         "product": "/images/product-zx9-speaker/desktop/image-product.jpg",
@@ -105,9 +109,10 @@
       "id": 5,
       "position": "mirrored",
       "name": "zx7",
+      "shortName": "zx7",
       "category": "speaker",
       "price_id": "price_1JzRPdGQ9nm0CiBq2Rm60YIp",
-      "price": "3.500",
+      "price": 3500,
       "image": {
         "category": "images/product-zx7-speaker/desktop/image-category-page-preview.jpg",
         "product": "/images/product-zx7-speaker/desktop/image-product.jpg",

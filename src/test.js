@@ -81,3 +81,8 @@ export const products = [
         </div>
       </div>
     </div>
+
+      //   const total = cart
+  //     .map((product) => product.price * product.quantity)
+  //     .reduce((sum, product) => sum + product, 0);
+  //   console.log(total);

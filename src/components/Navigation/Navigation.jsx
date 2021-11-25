@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import "./navigation.css";
 
 export default function Navigation(props) {
-  const { onCartClick } = props;
+  const { onCartClick, cart } = props;
   return (
     <nav className="nav">
       <Logo />
@@ -22,6 +22,9 @@ export default function Navigation(props) {
           Earphones
         </NavLink>
       </div>
+      {cart.length > 0 ? (
+        <div className="nav__cart-quantity">{cart.length}</div>
+      ) : null}
       <img
         onClick={onCartClick}
         src="/images/icon-cart.svg"

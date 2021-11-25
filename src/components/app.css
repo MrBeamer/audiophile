@@ -15,6 +15,11 @@ body {
   margin: 160px 165px 0 165px;
 }
 
+.container--checkout {
+  background-color: #f2f2f2;
+  padding: 165px 142px 141px 165px;
+}
+
 .app {
   max-width: 1440px;
   margin: 0 auto;

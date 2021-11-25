@@ -1,0 +1,62 @@
+import React from "react";
+import "./summary.css";
+import Button from "../Button/Button";
+
+export default function Summary(props) {
+  const { cart } = props;
+
+  const vat = 0.2;
+  const shipping = 50;
+
+  const total = cart.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
+
+  return (
+    <div className="summary">
+      <h6>Summary</h6>
+      <div className="summary__items">
+        {cart.map((product, index) => {
+          return (
+            <div key={index} className="summary__item">
+              <img
+                className="summary__item--image"
+                src={product.image.cart}
+                alt={`${product.name} ${product.category}`}
+              />
+              <div>
+                <p className="summary__item--product-name">
+                  {product.shortName}
+                </p>
+                <p className="summary__item--price">{`€ ${product.price}`} </p>
+              </div>
+              <p className="summary__item--quantity">{`x${product.quantity}`}</p>
+            </div>
+          );
+        })}
+      </div>
+      <div>
+        <div className="summary__container">
+          <p className="summary__title">Total</p>
+          <p className="summary__numbers">{`€ ${total}`}</p>
+        </div>
+        <div className="summary__container">
+          <p className="summary__title">Shipping</p>
+          <p className="summary__numbers">{`€ ${shipping}`}</p>
+        </div>
+        <div className="summary__container">
+          <p className="summary__title">VAT (INCLUDED)</p>
+          <p className="summary__numbers">{`€ ${(total * vat).toFixed(0)}`}</p>
+        </div>
+      </div>
+      <div className="summary__container">
+        <p className="summary__title">GRAND TOTAL</p>
+        <p className="summary__numbers last">{`€ ${total + shipping}`}</p>
+      </div>
+      <Button style={{ width: "100%" }} backgroundColor="orange">
+        Continue & Pay
+      </Button>
+    </div>
+  );
+}
