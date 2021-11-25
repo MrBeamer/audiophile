@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./navigation.css";
 
-export default function Navigation() {
+export default function Navigation(props) {
+  const { onCartClick } = props;
   return (
     <nav className="nav">
       <Logo />
@@ -21,7 +22,11 @@ export default function Navigation() {
           Earphones
         </NavLink>
       </div>
-      <img src="/images/icon-cart.svg" alt="shopping-cart icon" />
+      <img
+        onClick={onCartClick}
+        src="/images/icon-cart.svg"
+        alt="shopping-cart icon"
+      />
     </nav>
   );
 }

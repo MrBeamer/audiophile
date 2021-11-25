@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "xx99 mark i",
+      "cartName": "xx99 mk i",
       "category": "headphones",
       "price_id": "price_1JzRNjGQ9nm0CiBqsXuVVAgx",
       "price": "1.750",
@@ -90,6 +91,7 @@
       "image": {
         "category": "images/product-zx9-speaker/desktop/image-category-page-preview.jpg",
         "product": "/images/product-zx9-speaker/desktop/image-product.jpg",
+        "cart": "/images/cart/image-zx9-speaker.jpg",
         "gallery1": "/images/product-zx9-speaker/desktop/image-gallery-1.jpg",
         "gallery2": "/images/product-zx9-speaker/desktop/image-gallery-2.jpg",
         "gallery3": "/images/product-zx9-speaker/desktop/image-gallery-3.jpg"

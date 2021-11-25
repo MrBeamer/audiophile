@@ -5,7 +5,6 @@ import "./button.css";
 
 export default function Button(props) {
   const { linkTo = "#", children, backgroundColor, ...rest } = props;
-  // console.log(linkTo);
 
   const customClass = clsx({
     "btn--orange": backgroundColor === "orange",

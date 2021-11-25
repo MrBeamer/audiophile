@@ -34,7 +34,9 @@ export default function ProductCard(props) {
         <Overline />
         <ProductHeadline>{`${product.name} ${product.category}`}</ProductHeadline>
         <Paragraph margin="32px 0 38px 0">{product.description}</Paragraph>
-        {detailPage && <p className="productCard__price">{product.price}</p>}
+        {detailPage && (
+          <p className="productCard__price">{`€ ${product.price}`}</p>
+        )}
         <div className="productCard__buttons">
           {detailPage && (
             <QuantityButton
