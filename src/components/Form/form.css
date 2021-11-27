@@ -16,6 +16,15 @@
   margin-bottom: 41px;
 }
 
+.form__error {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.214286px;
+  color: #cd2c2c;
+}
+
 .form__subtitle {
   font-weight: 700;
   font-size: 13px;
@@ -48,7 +57,12 @@
   line-height: 19px;
   letter-spacing: -0.25px;
   color: #000000;
-  opacity: 0.4;
+  /* opacity: 0.4; */
+}
+
+.form__input:focus {
+  outline: none;
+  border: 1px solid #d87d4a;
 }
 
 .form__name {
@@ -105,4 +119,8 @@
   display: flex;
   align-items: center;
   gap: 32px;
+}
+
+.invalid-input:focus {
+  border: 2px solid #cd2c2c !important;
 }

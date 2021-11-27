@@ -1,23 +1,21 @@
-import { React } from "react";
-import "./cart.css";
-import QuantityButton from "../Button/QuantityButton";
-import Button from "../Button/Button";
+import React from "react";
+import "./orderConformation.css";
 
-export default function Cart(props) {
-  const { show, cart, onCartClick } = props;
+export default function OrderConformation(props) {
+  const { cart } = props;
 
+  const [show, setShow] = useState(false);
+
+  function handleShowCart() {
+    setShow((prevState) => !prevState);
+  }
   //   const [total, setTotal] = useState([]);
 
-  const total = cart.reduce(
-    (sum, product) => sum + product.price * product.quantity,
-    0
-  );
-  console.log(total);
-
-  //   useEffect(() => {
-  //     setTotal(prevTotal => prevTotal + cart.map(product => product.price * product.quantity)},[cart])
-  // console.log(total)
-
+  //   const total = cart.reduce(
+  //     (sum, product) => sum + product.price * product.quantity,
+  //     0
+  //   );
+  //   console.log(total);
   if (show)
     return (
       <>

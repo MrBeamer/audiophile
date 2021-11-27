@@ -14,8 +14,7 @@ export default function ProductDetailPage(props) {
   const category = products[params.category];
   const productName = params.product;
   const [product, setProduct] = useState({});
-  const { onProductAdd, onProductDelete, onProductQuantityChange, quantity } =
-    props;
+  const { onProductAdd, onProductQuantityChange, quantity } = props;
 
   useEffect(() => {
     const currentProduct = category.find(

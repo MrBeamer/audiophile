@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { loadStripe } from "@stripe/stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 import "./app.css";
 import Navigation from "./Navigation/Navigation";
 import Cart from "./Cart/Cart";
