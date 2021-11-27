@@ -1,5 +1,108 @@
 .form {
   background-color: #fff;
   width: 730px;
-  height: 1126px;
+  height: auto;
+  padding: 48px 48px;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  /* grid-template-rows: repeat(11, minmax(auto, 81px)); */
+  /* grid-auto-rows: min-content; */
+  /* grid-column-gap: 16px; */
+  /* grid-row-gap: 24px; */
+}
+
+.form__title {
+  margin-bottom: 41px;
+}
+
+.form__subtitle {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.928571px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  grid-column: 1/-1;
+}
+
+.form__label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  color: #000000;
+}
+
+.form__input,
+.form__payment-option {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 309px;
+  height: 56px;
+  padding-left: 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+}
+
+.form__name {
+  grid-column: 1;
+}
+
+/* .form__email {
+  grid-column: 2;
+} */
+
+/* .form__address input {
+  grid-column: 1/-1;
+  width: 100%;
+} */
+
+.form__shipping-info,
+.form__billing,
+.form__payment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 53px;
+  grid-auto-rows: min-content;
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+}
+
+.form__radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #fff;
+  background-clip: content-box;
+}
+
+.form__radio:checked {
+  background-color: #d87d4a;
+}
+
+.form__payment-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  opacity: 1;
+}
+
+.form__cash-info {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }

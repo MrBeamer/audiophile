@@ -7,7 +7,6 @@ export default function CheckoutPage(props) {
   return (
     <div className="container--checkout">
       <div className="checkout">
-        <div className="checkout__form"></div>
         <Form />
         <Summary cart={cart} />
       </div>
