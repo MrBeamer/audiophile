@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./orderConformation.css";
 import Button from "../Button/Button";
 import { ModalContext } from "../context/modalContext";
@@ -7,12 +7,18 @@ import Paragraph from "../TextElements/Paragraph";
 
 export default function OrderConformation(props) {
   const { cart } = props;
+  const [isExpanded, setIsExpanded] = useState(false);
   const context = useContext(ModalContext);
   const total = sumCart(cart);
   const shipping = 50;
 
   console.log(cart);
 
+  function handleExpand() {
+    setIsExpanded((prevState) => !prevState);
+  }
+  let length = isExpanded ? cart.length : 1;
+  console.log(cart.length);
   if (context.isShowing.conformation)
     return (
       <>
@@ -33,7 +39,7 @@ export default function OrderConformation(props) {
           </Paragraph>
           <div className="conformation_overview">
             <div className="conformation__items">
-              {cart?.map((product, index) => {
+              {cart?.slice(0, length).map((product, index) => {
                 return (
                   <div key={index} className="conformation__item">
                     <img
@@ -46,14 +52,31 @@ export default function OrderConformation(props) {
                         {product.shortName}
                       </p>
                       <p className="conformation__item--price">
-                        {`€ ${product.price}`}{" "}
+                        {`€ ${product.price}`}
                       </p>
                     </div>
+                    <p className="conformation__item--quantity">{`x${product.quantity}`}</p>
                   </div>
                 );
               })}
+              {cart.length > 1 && (
+                <p
+                  className="conformation__expand--overview"
+                  onClick={handleExpand}
+                >
+                  {length === 1
+                    ? `and ${cart.length - 1} other item(s)`
+                    : "View less"}
+                </p>
+              )}
             </div>
-            <div className="conformation__total">
+            <div
+              className={
+                isExpanded
+                  ? "conformation__total expanded"
+                  : "conformation__total"
+              }
+            >
               <div className="conformation__total--wrapper">
                 <p className="conformation__total--title">Grand Total</p>
                 <p className="conformation__total--price">{`€ ${

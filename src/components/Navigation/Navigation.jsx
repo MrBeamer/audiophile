@@ -7,6 +7,7 @@ import { ModalContext } from "../context/modalContext";
 export default function Navigation(props) {
   const context = useContext(ModalContext);
   const { cart } = props;
+  const sumQuantity = cart?.reduce((sum, product) => sum + product.quantity, 0);
 
   return (
     <nav className="nav">
@@ -26,7 +27,7 @@ export default function Navigation(props) {
         </NavLink>
       </div>
       {cart.length > 0 ? (
-        <div className="nav__cart-quantity">{cart.length}</div>
+        <div className="nav__cart-quantity">{sumQuantity}</div>
       ) : null}
       <img
         className="nav__cart-icon"
