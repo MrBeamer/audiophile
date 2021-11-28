@@ -10,15 +10,13 @@ import CategoryPage from "../pages/CategoryPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import OrderConformation from "./OrderConformation/OrderConformation";
+import { ModalProvider } from "./context/modalContext";
 
 // const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
 function App() {
-  const [show, setShow] = useState(false);
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  function handleShowCart() {
-    setShow((prevState) => !prevState);
-  }
 
   function handleProductQuantityChange(event) {
     const change = event.currentTarget.id;
@@ -67,34 +65,37 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="app">
-        <header>
-          <Navigation cart={cart} onCartClick={handleShowCart} />
-          <Cart cart={cart} show={show} onCartClick={handleShowCart} />
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/:category" element={<CategoryPage />} />
-            <Route
-              path="/:category/:product"
-              element={
-                <ProductDetailPage
-                  cart={cart}
-                  onProductAdd={handleProductAdd}
-                  onProductDelete={handleProductDelete}
-                  onProductQuantityChange={handleProductQuantityChange}
-                  quantity={quantity}
-                />
-              }
-            />
-            <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
-          </Routes>
-        </main>
-        <footer>
-          <Footer></Footer>
-        </footer>
-      </div>
+      <ModalProvider>
+        <div className="app">
+          <header>
+            <Navigation cart={cart} />
+            <Cart cart={cart} />
+          </header>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/:category" element={<CategoryPage />} />
+              <Route
+                path="/:category/:product"
+                element={
+                  <ProductDetailPage
+                    cart={cart}
+                    onProductAdd={handleProductAdd}
+                    onProductDelete={handleProductDelete}
+                    onProductQuantityChange={handleProductQuantityChange}
+                    quantity={quantity}
+                  />
+                }
+              />
+              <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
+            </Routes>
+            <OrderConformation cart={cart} />
+          </main>
+          <footer>
+            <Footer></Footer>
+          </footer>
+        </div>
+      </ModalProvider>
     </BrowserRouter>
   );
 }

@@ -1,27 +1,24 @@
-import { React } from "react";
+import React, { useContext } from "react";
 import "./cart.css";
 import QuantityButton from "../Button/QuantityButton";
 import Button from "../Button/Button";
+import { ModalContext } from "../context/modalContext";
+import { sumCart } from "../helpers";
 
 export default function Cart(props) {
-  const { show, cart, onCartClick } = props;
+  const { cart } = props;
+  const context = useContext(ModalContext);
+  const total = sumCart(cart);
 
-  //   const [total, setTotal] = useState([]);
-
-  const total = cart.reduce(
-    (sum, product) => sum + product.price * product.quantity,
-    0
-  );
   console.log(total);
 
-  //   useEffect(() => {
-  //     setTotal(prevTotal => prevTotal + cart.map(product => product.price * product.quantity)},[cart])
-  // console.log(total)
-
-  if (show)
+  if (context.isShowing.cart)
     return (
       <>
-        <div className="cart-mask"></div>
+        <div
+          onClick={() => context.toggleModal("cart")}
+          className="cart-mask"
+        ></div>
         <div className="cart">
           <div className="cart__quantity-control">
             <p className="cart__quantity-control--display">{`Cart (${cart.length})`}</p>
@@ -56,7 +53,7 @@ export default function Cart(props) {
             <p className="cart__total--price">{`€ ${total}`}</p>
           </div>
           <Button
-            onClick={() => onCartClick()}
+            onClick={() => context.toggleModal("cart")}
             linkTo="/checkout"
             style={{ width: "100%" }}
             backgroundColor="orange"

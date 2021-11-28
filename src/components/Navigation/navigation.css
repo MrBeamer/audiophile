@@ -27,8 +27,10 @@
   text-transform: uppercase;
 }
 
+.nav__cart-icon,
 .nav__nav-link:hover {
   color: #d87d4a;
+  cursor: pointer;
 }
 
 .nav__cart-quantity {

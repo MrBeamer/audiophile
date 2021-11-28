@@ -1,0 +1,77 @@
+import React, { useContext } from "react";
+import "./orderConformation.css";
+import Button from "../Button/Button";
+import { ModalContext } from "../context/modalContext";
+import { sumCart } from "../helpers";
+import Paragraph from "../TextElements/Paragraph";
+
+export default function OrderConformation(props) {
+  const { cart } = props;
+  const context = useContext(ModalContext);
+  const total = sumCart(cart);
+  const shipping = 50;
+
+  console.log(cart);
+
+  if (context.isShowing.conformation)
+    return (
+      <>
+        <div className="conformation-mask"></div>
+        <div className="conformation">
+          <div className="conformation__title--wrapper">
+            <h3 className="conformation__title">
+              THANK YOU <br /> FOR YOUR ORDER
+            </h3>
+            <img
+              className="conformation__icon"
+              src="/images/complete.svg"
+              alt="complete icon"
+            />
+          </div>
+          <Paragraph margin={"24px 0 0 0"}>
+            You will receive an email confirmation shortly.
+          </Paragraph>
+          <div className="conformation_overview">
+            <div className="conformation__items">
+              {cart?.map((product, index) => {
+                return (
+                  <div key={index} className="conformation__item">
+                    <img
+                      className="conformation__item--image"
+                      src={product.image.cart}
+                      alt={`${product.name} ${product.category}`}
+                    />
+                    <div>
+                      <p className="conformation__item--product-name">
+                        {product.shortName}
+                      </p>
+                      <p className="conformation__item--price">
+                        {`€ ${product.price}`}{" "}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="conformation__total">
+              <div className="conformation__total--wrapper">
+                <p className="conformation__total--title">Grand Total</p>
+                <p className="conformation__total--price">{`€ ${
+                  total + shipping
+                }`}</p>
+              </div>
+            </div>
+          </div>
+          <Button
+            onClick={() => context.toggleModal("conformation")}
+            linkTo="/"
+            style={{ width: "100%" }}
+            backgroundColor="orange"
+          >
+            Back to home
+          </Button>
+        </div>
+      </>
+    );
+  else return null;
+}

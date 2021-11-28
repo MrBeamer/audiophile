@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./summary.css";
 import Button from "../Button/Button";
+import { ModalContext } from "../context/modalContext";
+import { sumCart } from "../helpers";
 
 export default function Summary(props) {
+  const context = useContext(ModalContext);
   const { cart } = props;
 
   const vat = 0.2;
   const shipping = 50;
-
-  const total = cart.reduce(
-    (sum, product) => sum + product.price * product.quantity,
-    0
-  );
+  const total = sumCart(cart);
 
   return (
     <div className="summary">
@@ -54,7 +53,11 @@ export default function Summary(props) {
         <p className="summary__title">GRAND TOTAL</p>
         <p className="summary__numbers last">{`€ ${total + shipping}`}</p>
       </div>
-      <Button style={{ width: "100%" }} backgroundColor="orange">
+      <Button
+        onClick={() => context.toggleModal("conformation")}
+        style={{ width: "100%" }}
+        backgroundColor="orange"
+      >
         Continue & Pay
       </Button>
     </div>

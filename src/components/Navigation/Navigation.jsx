@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./navigation.css";
+import { ModalContext } from "../context/modalContext";
 
 export default function Navigation(props) {
-  const { onCartClick, cart } = props;
+  const context = useContext(ModalContext);
+  const { cart } = props;
+
   return (
     <nav className="nav">
       <Logo />
@@ -26,7 +29,8 @@ export default function Navigation(props) {
         <div className="nav__cart-quantity">{cart.length}</div>
       ) : null}
       <img
-        onClick={onCartClick}
+        className="nav__cart-icon"
+        onClick={() => context.toggleModal("cart")}
         src="/images/icon-cart.svg"
         alt="shopping-cart icon"
       />
