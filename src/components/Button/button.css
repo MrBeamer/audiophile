@@ -1,7 +1,9 @@
 button:disabled,
 button[disabled] {
-  background-color: #cccccc;
-  color: #666666;
+  /* background-color: #cccccc;
+  color: #666666; */
+  background-color: #d87d4a;
+  opacity: 0.5;
 }
 
 .btn {

@@ -7,11 +7,9 @@ function ModalProvider(props) {
     cart: false,
     conformation: false,
   });
-  console.log(isShowing);
 
   function toggleModal(modal) {
     setIsShowing((prevState) => ({ [modal]: !prevState[modal] }));
-    console.log("toggle");
   }
 
   function keyHideModal(event) {

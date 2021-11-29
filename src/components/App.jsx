@@ -27,9 +27,6 @@ function App() {
     }
   }
 
-  console.log(quantity);
-  console.log(cart);
-
   function handleProductAdd(product) {
     const duplicate = cart.some((cartProduct) => {
       return cartProduct.name === product.name;
@@ -50,20 +47,24 @@ function App() {
     setQuantity(1);
   }
 
-  // function handleUpdateCart(event, cart) {
-  //   console.log(event);
-  //   handleProductAdd(cart);
+  function handleUpdateCart(event) {
+    const change = event.currentTarget.id;
+    console.log(change);
+    cart.map((product) => {
+      console.log(product.quantity);
+      return (product.quantity -= -1);
+    });
 
-  //   // const change = event.currentTarget.id;
-  //   // if (change === "increase") {
-  //   //   setQuantity(quantity + 1);
-  //   // } else if (quantity > 1) {
-  //   //   setQuantity(quantity - 1);
-  //   // }
-  //   // console.log("Deleting product " + id);
-  //   console.log(event.currentTarget.id);
-  //   console.log(`update ${cart}`);
-  // }
+    // let quantity = product.quantity;
+    // if (change === "increase") {
+    //   setQuantity(quantity + 1);
+    //   product.quantity = quantity;
+    // } else if (quantity > 1) {
+    //   setQuantity(quantity - 1);
+    //   product.quantity = quantity;
+    // }
+    // return product;
+  }
 
   function handleRemoveAllProducts(cart) {
     if (cart.length > 0) setCart([]);
@@ -76,7 +77,11 @@ function App() {
         <div className="app">
           <header>
             <Navigation cart={cart} />
-            <Cart cart={cart} onRemoveAllProducts={handleRemoveAllProducts} />
+            <Cart
+              cart={cart}
+              onRemoveAllProducts={handleRemoveAllProducts}
+              onUpdateCart={handleUpdateCart}
+            />
           </header>
           <main>
             <Routes>

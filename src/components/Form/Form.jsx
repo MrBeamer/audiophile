@@ -16,6 +16,7 @@ export default function Form(props) {
             Name
           </label>
           <input
+            placeholder="Name"
             className="form__input"
             type="name"
             name="name"
@@ -32,6 +33,7 @@ export default function Form(props) {
             Email
           </label>
           <input
+            placeholder="example@mail.com"
             className={`form__input`}
             type="email"
             name="email"
@@ -48,6 +50,7 @@ export default function Form(props) {
             Phone Number
           </label>
           <input
+            placeholder="+49151163303"
             className="form__input"
             type="tel"
             name="tel"
@@ -68,6 +71,7 @@ export default function Form(props) {
             Address
           </label>
           <input
+            placeholder="Am Felde 58"
             className="form__input"
             type="address"
             name="address"
@@ -84,6 +88,7 @@ export default function Form(props) {
             ZIP Code
           </label>
           <input
+            placeholder="10178"
             className="form__input"
             type="zipcode"
             name="zipcode"
@@ -100,6 +105,7 @@ export default function Form(props) {
             City
           </label>
           <input
+            placeholder="Berlin"
             className="form__input"
             type="city"
             name="city"
@@ -116,6 +122,7 @@ export default function Form(props) {
             Country
           </label>
           <input
+            placeholder="Germany"
             className="form__input"
             type="country"
             name="country"

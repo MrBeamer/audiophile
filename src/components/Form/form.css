@@ -124,3 +124,13 @@
 .invalid-input:focus {
   border: 2px solid #cd2c2c !important;
 }
+
+::placeholder {
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+}

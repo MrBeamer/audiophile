@@ -119,3 +119,7 @@ h6 {
 .accessories_name {
   opacity: 0.5;
 }
+
+/* Animations */
+.animate__animated.animate__fadeIn {
+}

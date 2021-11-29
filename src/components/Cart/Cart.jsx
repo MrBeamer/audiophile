@@ -4,9 +4,10 @@ import QuantityButton from "../Button/QuantityButton";
 import Button from "../Button/Button";
 import { ModalContext } from "../context/modalContext";
 import { sumCart } from "../helpers";
+import "animate.css";
 
 export default function Cart(props) {
-  const { cart, onRemoveAllProducts } = props;
+  const { cart, onRemoveAllProducts, onUpdateCart } = props;
   const context = useContext(ModalContext);
   const total = sumCart(cart);
 
@@ -15,9 +16,9 @@ export default function Cart(props) {
       <>
         <div
           onClick={() => context.toggleModal("cart")}
-          className="cart-mask"
+          className="cart-mask animate__animated animate__fadeIn"
         ></div>
-        <div className="cart">
+        <div className="cart animate__animated animate__fadeIn">
           <div className="cart__quantity-control">
             <p className="cart__quantity-control--display">{`Cart (${cart.length})`}</p>
             <p
@@ -43,6 +44,7 @@ export default function Cart(props) {
                     <p className="cart__item--price">{`€ ${product.price}`} </p>
                   </div>
                   <QuantityButton
+                    onProductQuantityChange={onUpdateCart}
                     style={{ maxWidth: "96px", maxHeight: "32px" }}
                   >
                     {product.quantity}

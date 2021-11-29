@@ -20,7 +20,7 @@ export default function ProductDetailPage(props) {
     const currentProduct = category.find(
       (product) => product.name.split(" ").join("-") === productName
     );
-    console.log(currentProduct);
+    // console.log(currentProduct);
     setProduct(currentProduct);
   }, [category, productName]);
 

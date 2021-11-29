@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { ModalContext } from "../context/modalContext";
 import { sumCart } from "../helpers";
 import Paragraph from "../TextElements/Paragraph";
+import "animate.css";
 
 export default function OrderConformation(props) {
   const { cart } = props;
@@ -12,18 +13,16 @@ export default function OrderConformation(props) {
   const total = sumCart(cart);
   const shipping = 50;
 
-  console.log(cart);
-
   function handleExpand() {
     setIsExpanded((prevState) => !prevState);
   }
   let length = isExpanded ? cart.length : 1;
-  console.log(cart.length);
+
   if (context.isShowing.conformation)
     return (
       <>
-        <div className="conformation-mask"></div>
-        <div className="conformation">
+        <div className="conformation-mask animate__animated animate__fadeIn"></div>
+        <div className="conformation animate__animated animate__fadeIn">
           <div className="conformation__title--wrapper">
             <h3 className="conformation__title">
               THANK YOU <br /> FOR YOUR ORDER
