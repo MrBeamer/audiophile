@@ -50,16 +50,23 @@ function App() {
     setQuantity(1);
   }
 
-  // const test = { ...product, quantity: quantity };
-  // console.log(test);
-  // console.log("Adding product " + newProduct.id);
-  // take quantity and use spreed operator to put quantity in the product object and update it always when the quantity is changing then push object into cart array
-  // console.log("Adding product");
-  // console.log(product);
+  function handleUpdateCart(event, cart) {
+    console.log(event);
+    handleProductAdd(cart);
 
-  function handleProductDelete() {
+    // const change = event.currentTarget.id;
+    // if (change === "increase") {
+    //   setQuantity(quantity + 1);
+    // } else if (quantity > 1) {
+    //   setQuantity(quantity - 1);
+    // }
     // console.log("Deleting product " + id);
-    console.log("Deleting product");
+    console.log(event.currentTarget.id);
+    console.log(`update ${cart}`);
+  }
+
+  function handleRemoveAllProducts(cart) {
+    if (cart.length > 0) setCart([]);
   }
 
   return (
@@ -69,7 +76,12 @@ function App() {
         <div className="app">
           <header>
             <Navigation cart={cart} />
-            <Cart cart={cart} />
+            <Cart
+              cart={cart}
+              onRemoveAllProducts={handleRemoveAllProducts}
+              onUpdateCart={handleUpdateCart}
+              onProductQuantityChange={handleProductQuantityChange}
+            />
           </header>
           <main>
             <Routes>
@@ -81,7 +93,6 @@ function App() {
                   <ProductDetailPage
                     cart={cart}
                     onProductAdd={handleProductAdd}
-                    onProductDelete={handleProductDelete}
                     onProductQuantityChange={handleProductQuantityChange}
                     quantity={quantity}
                   />

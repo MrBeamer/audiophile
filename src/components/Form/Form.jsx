@@ -3,74 +3,79 @@ import Paragraph from "../TextElements/Paragraph";
 import "./form.css";
 import { useFormik } from "formik";
 
-export default function Form() {
-  const validate = (values) => {
-    const errors = {};
+export default function Form(props) {
+  const { formik } = props;
+  // const validate = (values) => {
+  //   const errors = {};
 
-    if (!values.name) {
-      errors.name = "Required";
-    } else if (values.name.length > 15) {
-      errors.name = "Must be 15 characters or less";
-    }
+  //   if (!values.name) {
+  //     errors.name = "Required";
+  //   } else if (values.name.length > 15) {
+  //     errors.name = "Must be 15 characters or less";
+  //   }
 
-    if (!values.tel) {
-      errors.tel = "Required";
-    } else if (!/^\d{9,16}/g.test(values.tel)) {
-      errors.tel = "Invalid phone number";
-    }
+  //   if (!values.tel) {
+  //     errors.tel = "Required";
+  //   } else if (!/^\d{9,16}/g.test(values.tel)) {
+  //     errors.tel = "Invalid phone number";
+  //   }
 
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = "Invalid email address";
-    }
+  //   if (!values.email) {
+  //     errors.email = "Required";
+  //   } else if (
+  //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+  //   ) {
+  //     errors.email = "Invalid email address";
+  //   }
 
-    if (!values.address) {
-      errors.address = "Required";
-    } else if (values.address.length < 10) {
-      errors.address = "Invalid address";
-    }
+  //   if (!values.address) {
+  //     errors.address = "Required";
+  //   } else if (values.address.length < 10) {
+  //     errors.address = "Invalid address";
+  //   }
 
-    if (!values.zipcode) {
-      errors.zipcode = "Required";
-    } else if (!/^\d{5}$/.test(values.zipcode)) {
-      errors.zipcode = "Invalid zipcode";
-    }
+  //   if (!values.zipcode) {
+  //     errors.zipcode = "Required";
+  //   } else if (!/^\d{5}$/.test(values.zipcode)) {
+  //     errors.zipcode = "Invalid zipcode";
+  //   }
 
-    if (!values.city) {
-      errors.city = "Required";
-    } else if (!/^[A-Za-z\s]{4,26}$/.test(values.city)) {
-      errors.city = "Invalid city";
-    }
+  //   if (!values.city) {
+  //     errors.city = "Required";
+  //   } else if (!/^[A-Za-z\s]{4,26}$/.test(values.city)) {
+  //     errors.city = "Invalid city";
+  //   }
 
-    if (!values.country) {
-      errors.country = "Required";
-    } else if (!/^[A-Za-z\s]{4,56}$/.test(values.country)) {
-      errors.country = "Invalid country";
-    }
+  //   if (!values.country) {
+  //     errors.country = "Required";
+  //   } else if (!/^[A-Za-z\s]{4,56}$/.test(values.country)) {
+  //     errors.country = "Invalid country";
+  //   }
 
-    return errors;
-  };
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      name: "",
-      tel: "",
-      address: "",
-      zipcode: "",
-      city: "",
-      country: "",
-      payment: "",
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  //   return errors;
+  // };
+
+  // const formik = useFormik({
+  //   initialValues: {
+  //     email: "",
+  //     name: "",
+  //     tel: "",
+  //     address: "",
+  //     zipcode: "",
+  //     city: "",
+  //     country: "",
+  //     payment: "",
+  //   },
+  //   validate,
+  //   onSubmit: (values) => {
+  //     alert(JSON.stringify(values, null, 2));
+  //   },
+  // });
 
   console.log(formik.values);
+  console.log(formik.errors);
+
+  // if(formik.errors === {} )
 
   return (
     <form className="form" onSubmit={formik.handleSubmit}>
@@ -236,10 +241,6 @@ export default function Form() {
           </Paragraph>
         </div>
       )}
-
-      {/* <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button> */}
     </form>
   );
 }

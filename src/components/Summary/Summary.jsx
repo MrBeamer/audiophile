@@ -6,7 +6,7 @@ import { sumCart } from "../helpers";
 
 export default function Summary(props) {
   const context = useContext(ModalContext);
-  const { cart } = props;
+  const { cart, formik } = props;
 
   const vat = 0.2;
   const shipping = 50;
@@ -53,13 +53,17 @@ export default function Summary(props) {
         <p className="summary__title">GRAND TOTAL</p>
         <p className="summary__numbers last">{`€ ${total + shipping}`}</p>
       </div>
-      <Button
+
+      <button
+        className="btn btn--submit"
+        type="submit"
+        disabled={
+          !(formik.isValid && formik.dirty && formik.values.payment !== "")
+        }
         onClick={() => context.toggleModal("conformation")}
-        style={{ width: "100%" }}
-        backgroundColor="orange"
       >
         Continue & Pay
-      </Button>
+      </button>
     </div>
   );
 }

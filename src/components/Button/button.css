@@ -1,3 +1,9 @@
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
 .btn {
   display: flex;
   height: 48px;
@@ -21,6 +27,11 @@
   border: 1px solid #000000;
 }
 
+.btn--outline:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
 .btn--orange {
   background-color: #d87d4a;
   color: #fff;
@@ -30,9 +41,20 @@
   background-color: #fbaf85;
 }
 
-.btn--outline:hover {
-  background-color: #000000;
+.btn--black {
   color: #fff;
+  background-color: #000000;
+}
+
+.btn--black:hover {
+  color: #fff;
+  background-color: #4c4c4c;
+}
+
+.btn--submit {
+  background-color: #d87d4a;
+  color: #fff;
+  width: 100%;
 }
 
 .quantity-button {

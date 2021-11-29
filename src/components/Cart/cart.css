@@ -40,6 +40,12 @@
   font-weight: 500;
 }
 
+.cart__quantity-control--remove:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #d87d4a;
+}
+
 .cart__item {
   display: flex;
   justify-content: space-between;

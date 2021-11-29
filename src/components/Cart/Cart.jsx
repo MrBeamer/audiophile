@@ -6,11 +6,10 @@ import { ModalContext } from "../context/modalContext";
 import { sumCart } from "../helpers";
 
 export default function Cart(props) {
-  const { cart } = props;
+  const { cart, onRemoveAllProducts, onUpdateCart, onProductQuantityChange } =
+    props;
   const context = useContext(ModalContext);
   const total = sumCart(cart);
-
-  console.log(total);
 
   if (context.isShowing.cart)
     return (
@@ -22,7 +21,12 @@ export default function Cart(props) {
         <div className="cart">
           <div className="cart__quantity-control">
             <p className="cart__quantity-control--display">{`Cart (${cart.length})`}</p>
-            <p className="cart__quantity-control--remove">Remove all</p>
+            <p
+              className="cart__quantity-control--remove"
+              onClick={() => onRemoveAllProducts(cart)}
+            >
+              Remove all
+            </p>
           </div>
           <div className="cart__items">
             {cart.map((product, index) => {

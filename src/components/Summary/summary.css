@@ -6,6 +6,7 @@
 .summary {
   flex: 1;
   display: grid;
+  /* grid-auto-rows: min-content; */
   max-height: 612px;
   max-width: 350px;
   padding: 31px 32px;

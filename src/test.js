@@ -86,3 +86,12 @@ export const products = [
   //     .map((product) => product.price * product.quantity)
   //     .reduce((sum, product) => sum + product, 0);
   //   console.log(total);
+
+
+        {/* <Button
+        onClick={() => context.toggleModal("conformation")}
+        style={{ width: "100%" }}
+        backgroundColor="orange"
+      >
+        Continue & Pay
+      </Button> */}
