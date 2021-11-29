@@ -31,4 +31,3 @@ yarn-error.log*
 # api keys
 .env 
 
-netlify.toml
