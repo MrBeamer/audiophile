@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./summary.css";
-import Button from "../Button/Button";
 import { ModalContext } from "../context/modalContext";
 import { sumCart } from "../helpers";
 

@@ -6,8 +6,7 @@ import { ModalContext } from "../context/modalContext";
 import { sumCart } from "../helpers";
 
 export default function Cart(props) {
-  const { cart, onRemoveAllProducts, onUpdateCart, onProductQuantityChange } =
-    props;
+  const { cart, onRemoveAllProducts } = props;
   const context = useContext(ModalContext);
   const total = sumCart(cart);
 

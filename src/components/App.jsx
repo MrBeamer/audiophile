@@ -50,20 +50,20 @@ function App() {
     setQuantity(1);
   }
 
-  function handleUpdateCart(event, cart) {
-    console.log(event);
-    handleProductAdd(cart);
+  // function handleUpdateCart(event, cart) {
+  //   console.log(event);
+  //   handleProductAdd(cart);
 
-    // const change = event.currentTarget.id;
-    // if (change === "increase") {
-    //   setQuantity(quantity + 1);
-    // } else if (quantity > 1) {
-    //   setQuantity(quantity - 1);
-    // }
-    // console.log("Deleting product " + id);
-    console.log(event.currentTarget.id);
-    console.log(`update ${cart}`);
-  }
+  //   // const change = event.currentTarget.id;
+  //   // if (change === "increase") {
+  //   //   setQuantity(quantity + 1);
+  //   // } else if (quantity > 1) {
+  //   //   setQuantity(quantity - 1);
+  //   // }
+  //   // console.log("Deleting product " + id);
+  //   console.log(event.currentTarget.id);
+  //   console.log(`update ${cart}`);
+  // }
 
   function handleRemoveAllProducts(cart) {
     if (cart.length > 0) setCart([]);
@@ -76,12 +76,7 @@ function App() {
         <div className="app">
           <header>
             <Navigation cart={cart} />
-            <Cart
-              cart={cart}
-              onRemoveAllProducts={handleRemoveAllProducts}
-              onUpdateCart={handleUpdateCart}
-              onProductQuantityChange={handleProductQuantityChange}
-            />
+            <Cart cart={cart} onRemoveAllProducts={handleRemoveAllProducts} />
           </header>
           <main>
             <Routes>
