@@ -3,13 +3,6 @@
   width: 730px;
   height: auto;
   padding: 48px 48px;
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-  /* grid-template-rows: repeat(11, minmax(auto, 81px)); */
-  /* grid-auto-rows: min-content; */
-  /* grid-column-gap: 16px; */
-  /* grid-row-gap: 24px; */
 }
 
 .form__title {
@@ -57,7 +50,6 @@
   line-height: 19px;
   letter-spacing: -0.25px;
   color: #000000;
-  /* opacity: 0.4; */
 }
 
 .form__input:focus {
@@ -68,15 +60,6 @@
 .form__name {
   grid-column: 1;
 }
-
-/* .form__email {
-  grid-column: 2;
-} */
-
-/* .form__address input {
-  grid-column: 1/-1;
-  width: 100%;
-} */
 
 .form__shipping-info,
 .form__billing,

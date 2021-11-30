@@ -1,22 +1,22 @@
 import { React, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { loadStripe } from "@stripe/stripe-js";
+import {
+  Navigation,
+  Cart,
+  Footer,
+  OrderConformation,
+  ScrollToTop,
+} from "./components";
+import { Home, CategoryPage, ProductDetailPage, CheckoutPage } from "./pages";
+import { ModalProvider } from "./components/context/modalContext";
 import "./app.css";
-import Navigation from "./Navigation/Navigation";
-import Cart from "./Cart/Cart";
-import Footer from "./Footer/Footer";
-import Home from "../pages/Home";
-import CategoryPage from "../pages/CategoryPage";
-import ProductDetailPage from "../pages/ProductDetailPage";
-import CheckoutPage from "../pages/CheckoutPage";
-import ScrollToTop from "./ScrollToTop/ScrollToTop";
-import OrderConformation from "./OrderConformation/OrderConformation";
-import { ModalProvider } from "./context/modalContext";
 
 // const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
 function App() {
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [rerender, setRerender] = useState(false);
 
   function handleProductQuantityChange(event) {
     const change = event.currentTarget.id;
@@ -48,22 +48,23 @@ function App() {
   }
 
   function handleUpdateCart(event) {
+    //Give the quantity buttons an id or index so i can compare them with iterated products / establish a connection
     const change = event.currentTarget.id;
-    console.log(change);
-    cart.map((product) => {
-      console.log(product.quantity);
-      return (product.quantity -= -1);
-    });
+    const indexButton = Number(event.currentTarget.dataset.index);
 
-    // let quantity = product.quantity;
-    // if (change === "increase") {
-    //   setQuantity(quantity + 1);
-    //   product.quantity = quantity;
-    // } else if (quantity > 1) {
-    //   setQuantity(quantity - 1);
-    //   product.quantity = quantity;
-    // }
-    // return product;
+    const productToUpdate = cart.find(
+      (product, index) => index === indexButton
+    );
+
+    if (change === "increase") {
+      productToUpdate.quantity += 1;
+      setRerender(!rerender);
+    } else if (productToUpdate.quantity !== 0) {
+      productToUpdate.quantity -= 1;
+      setRerender(!rerender);
+    }
+
+    setCart(cart.filter((product) => product.quantity !== 0));
   }
 
   function handleRemoveAllProducts(cart) {

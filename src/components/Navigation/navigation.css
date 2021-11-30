@@ -6,7 +6,6 @@
   height: 96px;
   background-color: #0e0e0e;
   border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-
   margin: 0 165px;
   color: #ffffff;
 }
@@ -18,7 +17,6 @@
 
 .nav__nav-link {
   font-size: 13px;
-  font-style: normal;
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 2px;
