@@ -18,7 +18,7 @@
   padding: 31px 32px;
   z-index: 10;
   grid-row-gap: 20px;
-  /* grid-template-rows: repeat(auto-fill, 1fr); */
+  /* grid-template-rows: repeat(auto-fill, 1fr); t*/
 }
 
 .cart__quantity-control,
