@@ -20,11 +20,13 @@ export default function ShopIntro(props) {
           best place to buy your portable audio equipment.
         </Paragraph>
       </div>
-      <img
-        className="intro__image"
-        src="/images/shared/desktop/image-best-gear.jpg"
-        alt="Man wears black headphones"
-      />
+      <di className="intro__image-container">
+        <img
+          className="intro__image"
+          src="/images/shared/desktop/image-best-gear.jpg"
+          alt="Man wears black headphones"
+        />
+      </di>
     </div>
   );
 }

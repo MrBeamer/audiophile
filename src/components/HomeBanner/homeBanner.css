@@ -18,6 +18,9 @@
   margin: 0;
 }
 
+.home-banner__image-container {
+}
+
 .home-banner__image {
-  max-width: 708.8px;
+  max-width: 709px;
 }

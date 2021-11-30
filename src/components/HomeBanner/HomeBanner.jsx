@@ -26,11 +26,13 @@ export default function HomeBanner() {
           See Product
         </Button>
       </div>
-      <img
-        className="home-banner__image desktop"
-        src="/images/home/desktop/hero.jpeg"
-        alt="black xx99-mark-two-headphones"
-      />
+      <div className="home-banner__image-container">
+        <img
+          className="home-banner__image desktop"
+          src="/images/home/desktop/hero.jpeg"
+          alt="black xx99-mark-two-headphones"
+        />
+      </div>
     </div>
   );
 }
