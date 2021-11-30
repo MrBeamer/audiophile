@@ -48,6 +48,7 @@ function App() {
   }
 
   function handleUpdateCart(event) {
+    //Give the quantity buttons an id or index so i can compare them with iterated products / establish a connection
     const change = event.currentTarget.id;
     const indexButton = Number(event.currentTarget.dataset.index);
 
@@ -62,11 +63,9 @@ function App() {
       productToUpdate.quantity -= 1;
       setRerender(!rerender);
     }
-    console.log(cart);
+
     setCart(cart.filter((product) => product.quantity !== 0));
   }
-
-  //solution give the quantity buttons an id or index so i can compare them with iterated products
 
   function handleRemoveAllProducts(cart) {
     if (cart.length > 0) setCart([]);

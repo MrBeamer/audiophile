@@ -10,7 +10,6 @@ export default function Cart(props) {
   const { cart, onRemoveAllProducts, onUpdateCart } = props;
   const context = useContext(ModalContext);
   const total = sumCart(cart);
-  const cartNotEmpty = cart.length > 0;
 
   if (context.isShowing.cart)
     return (
@@ -20,21 +19,20 @@ export default function Cart(props) {
           className="cart-mask animate__animated animate__fadeIn"
         ></div>
         <div className="cart animate__animated animate__fadeIn">
-          <div className="cart__quantity-control">
-            <p className="cart__quantity-control--display">{`Cart (${cart.length})`}</p>
-            {cartNotEmpty && (
+          {cart.length < 1 ? (
+            <div className="cart__empty">Your cart is empty.</div>
+          ) : (
+            <div className="cart__quantity-control">
+              <p className="cart__quantity-control--display">{`Cart (${cart.length})`}</p>
               <p
                 className="cart__quantity-control--remove"
                 onClick={() => onRemoveAllProducts(cart)}
               >
                 Remove all
               </p>
-            )}
-          </div>
+            </div>
+          )}
           <div className="cart__items">
-            {cart.length < 1 && (
-              <div className="cart__empty">Your cart is empty.</div>
-            )}
             {cart.map((product, index) => {
               return (
                 <div key={index} className="cart__item">
@@ -60,22 +58,20 @@ export default function Cart(props) {
               );
             })}
           </div>
-
-          {cart.length > 0 && (
-              <div className="cart__total">
-                <p className="cart__total--title">Total:</p>
-                <p className="cart__total--price">{`€ ${total}`}</p>
-              </div>
-            ) && (
-              <Button
-                onClick={() => context.toggleModal("cart")}
-                linkTo="/checkout"
-                style={{ width: "100%" }}
-                backgroundColor="orange"
-              >
-                Checkout
-              </Button>
-            )}
+          <div className="cart__total">
+            <p className="cart__total--title">Total:</p>
+            <p className="cart__total--price">{`€ ${total}`}</p>
+          </div>
+          {cart.length < 1 ? null : (
+            <Button
+              onClick={() => context.toggleModal("cart")}
+              linkTo="/checkout"
+              style={{ width: "100%" }}
+              backgroundColor="orange"
+            >
+              Checkout
+            </Button>
+          )}
         </div>
       </>
     );
