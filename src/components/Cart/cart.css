@@ -21,6 +21,14 @@
   /* grid-template-rows: repeat(auto-fill, 1fr); t*/
 }
 
+.cart__empty {
+  color: #d87d4a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+}
+
 .cart__quantity-control,
 .cart__total {
   display: flex;

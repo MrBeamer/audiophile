@@ -5,11 +5,12 @@ export default function QuantityButton(props) {
   // const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="quantity-button" {...rest}>
+    <div className="quantity-button">
       <p
         onClick={onProductQuantityChange}
         className="quantity-button--decrease"
         id="decrease"
+        {...rest}
       >
         -
       </p>
@@ -18,6 +19,7 @@ export default function QuantityButton(props) {
         onClick={onProductQuantityChange}
         className="quantity-button--increase"
         id="increase"
+        {...rest}
       >
         +
       </p>
