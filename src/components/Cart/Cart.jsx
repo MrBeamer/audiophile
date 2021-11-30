@@ -61,21 +61,22 @@ export default function Cart(props) {
             })}
           </div>
 
-          {cart.length > 0 && (
-              <div className="cart__total">
-                <p className="cart__total--title">Total:</p>
-                <p className="cart__total--price">{`€ ${total}`}</p>
-              </div>
-            ) && (
-              <Button
-                onClick={() => context.toggleModal("cart")}
-                linkTo="/checkout"
-                style={{ width: "100%" }}
-                backgroundColor="orange"
-              >
-                Checkout
-              </Button>
-            )}
+          {cart.length > 0 ? (
+            <div className="cart__total">
+              <p className="cart__total--title">Total:</p>
+              <p className="cart__total--price">{`€ ${total}`}</p>
+            </div>
+          ) : null}
+          {cart.length > 0 ? (
+            <Button
+              onClick={() => context.toggleModal("cart")}
+              linkTo="/checkout"
+              style={{ width: "100%" }}
+              backgroundColor="orange"
+            >
+              Checkout
+            </Button>
+          ) : null}
         </div>
       </>
     );
