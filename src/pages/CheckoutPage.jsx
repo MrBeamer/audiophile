@@ -2,6 +2,7 @@ import React from "react";
 import Summary from "../components/Summary/Summary";
 import Form from "../components/Form/Form";
 import { useFormik } from "formik";
+import "animate.css";
 
 export default function CheckoutPage(props) {
   const { cart } = props;
@@ -74,7 +75,7 @@ export default function CheckoutPage(props) {
   });
   return (
     <div className="container--checkout">
-      <div className="checkout">
+      <div className="checkout animate__animated animate__fadeIn">
         <Form formik={formik} />
         <Summary cart={cart} formik={formik} />
       </div>

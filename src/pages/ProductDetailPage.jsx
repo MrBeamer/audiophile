@@ -71,6 +71,4 @@ export default function ProductDetailPage(props) {
   );
 }
 
-//fix br in feature text and find out how to fix random jumps when clicking on links from routers
-// build cart
 // fix the product gallery and the in the box components

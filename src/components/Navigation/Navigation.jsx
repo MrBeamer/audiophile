@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./navigation.css";
+import { sumCart } from "../helpers";
 import { ModalContext } from "../context/modalContext";
 
 export default function Navigation(props) {

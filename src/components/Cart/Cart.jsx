@@ -44,6 +44,7 @@ export default function Cart(props) {
                     <p className="cart__item--price">{`€ ${product.price}`} </p>
                   </div>
                   <QuantityButton
+                    data-index={index}
                     onProductQuantityChange={onUpdateCart}
                     style={{ maxWidth: "96px", maxHeight: "32px" }}
                   >

@@ -28,11 +28,11 @@
   gap: 10px;
   list-style: none;
   font-size: 27px;
-  cursor: pointer;
 }
 
 .fab:hover {
   color: #d87d4a;
+  cursor: pointer;
 }
 
 .footer__nav-links {
