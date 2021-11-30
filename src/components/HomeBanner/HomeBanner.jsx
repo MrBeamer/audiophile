@@ -27,7 +27,7 @@ export default function HomeBanner() {
         </Button>
       </div>
       <img
-        className="home-banner__image"
+        className="home-banner__image desktop"
         src="/images/home/desktop/hero.jpeg"
         alt="black xx99-mark-two-headphones"
       />

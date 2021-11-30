@@ -122,3 +122,59 @@ h6 {
 /* Animations */
 .animate__animated.animate__fadeIn {
 }
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 0 40px;
+  }
+
+  .home-banner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 0;
+  }
+
+  .home-banner__content {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+  }
+  .home-banner__image {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-ZX9 {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 560px;
+  }
+
+  .product-ZX9__container {
+    justify-self: center;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .tablet-image {
+    width: 197.21px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    margin: 55px 20px;
+  }
+}

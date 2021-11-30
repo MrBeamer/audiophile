@@ -1,7 +1,7 @@
 .product-grid {
   display: grid;
   grid-gap: 48px;
-  width: 1100px;
+  max-width: 1100px;
 }
 
 .product-ZX9 {

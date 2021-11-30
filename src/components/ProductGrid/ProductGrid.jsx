@@ -8,8 +8,13 @@ export default function ProductGrid() {
       <div className="product-ZX9">
         <div className="product-ZX9__container">
           <img
-            className="product-ZX9__image"
+            className="product-ZX9__image desktop-image"
             src="/images/home/desktop/image-speaker-zx9.png"
+            alt="ZX9 Speaker"
+          />
+          <img
+            className="product-ZX9__image tablet-image"
+            src="images/home/tablet/image-speaker-zx9.png"
             alt="ZX9 Speaker"
           />
           <img
