@@ -10,11 +10,10 @@ export default function Navigation(props) {
   const context = useContext(ModalContext);
   const { cart } = props;
   const sumQuantity = cart?.reduce((sum, product) => sum + product.quantity, 0);
-  console.log(context.isShowing);
   return (
     <nav className="nav">
       <div className="nav__mobile--menu">
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
         <Logo />
       </div>
       <div className="nav__nav-links collapsed">
