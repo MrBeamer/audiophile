@@ -130,7 +130,7 @@ h6 {
 
 /* Media queries */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   /* General */
 
   .container {
@@ -248,6 +248,20 @@ h6 {
     grid-column: 1;
     grid-row: 2;
     justify-content: flex-start;
+  }
+
+  /* Navigation */
+
+  .nav {
+    margin: 0 40px;
+  }
+
+  .collapsed {
+    display: none;
+  }
+
+  .nav__mobile--menu {
+    display: flex;
   }
 }
 

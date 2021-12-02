@@ -6,6 +6,7 @@ function ModalProvider(props) {
   const [isShowing, setIsShowing] = useState({
     cart: false,
     conformation: false,
+    navbar: false,
   });
 
   function toggleModal(modal) {
