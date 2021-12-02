@@ -9,6 +9,7 @@ body {
 
 .container {
   margin: 0 165px;
+  max-width: 1100px;
 }
 
 .container--productDetail {
@@ -123,12 +124,28 @@ h6 {
 .animate__animated.animate__fadeIn {
 }
 
+.tablet-image {
+  display: none;
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 768px) {
+  /* General */
+
   .container {
     margin: 0 40px;
   }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .tablet-image {
+    display: block;
+  }
+
+  /* Home-Banner */
 
   .home-banner {
     grid-template-columns: 1fr;
@@ -149,6 +166,8 @@ h6 {
     z-index: 0;
   }
 
+  /* Product-Grid */
+
   .product-grid {
     grid-template-columns: 1fr;
   }
@@ -157,19 +176,78 @@ h6 {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    height: 560px;
   }
 
   .product-ZX9__container {
     justify-self: center;
   }
 
-  .desktop-image {
-    display: none;
+  .product-ZX9__image.tablet-image {
+    width: 197.21px;
   }
 
-  .tablet-image {
-    width: 197.21px;
+  .product-ZX9__content {
+    /* margin-top: 0; */
+    display: grid;
+    justify-items: center;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  .product-ZX9__circles {
+    top: -129%;
+    left: -182%;
+  }
+
+  .product-ZX7 {
+    background-image: url("/src/assets/image-speaker-zx7-tablet.jpg");
+  }
+
+  .product-ZX7__content {
+    padding: 101px 0 101px 60px;
+  }
+
+  .product-YX1__image {
+    background-image: url("/src/assets/image-earphones-yx1-tablet.jpg");
+  }
+
+  /* Show-Intro */
+
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .intro__content,
+  .intro__content h2 {
+    max-width: 573px !important;
+  }
+
+  .intro__image-container {
+    grid-row: 1;
+    max-width: 689px;
+  }
+
+  .intro__image {
+    max-width: 100%;
+  }
+
+  /* Footer */
+
+  .footer {
+    padding: 60px 40px 46px 40px;
+    grid-template-columns: 1fr;
+  }
+
+  .footer__social-links {
+    grid-row: 4;
+  }
+
+  .footer__nav-links {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: flex-start;
   }
 }
 

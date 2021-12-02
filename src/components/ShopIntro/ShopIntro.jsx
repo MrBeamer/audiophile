@@ -22,8 +22,13 @@ export default function ShopIntro(props) {
       </div>
       <di className="intro__image-container">
         <img
-          className="intro__image"
+          className="intro__image desktop-image"
           src="/images/shared/desktop/image-best-gear.jpg"
+          alt="Man wears black headphones"
+        />
+        <img
+          className="intro__image tablet-image"
+          src="/images/shared/tablet/image-best-gear.jpg"
           alt="Man wears black headphones"
         />
       </di>
