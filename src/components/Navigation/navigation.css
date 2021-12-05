@@ -8,6 +8,7 @@
   border-bottom: 1px solid rgb(255, 255, 255, 0.2);
   margin: 0 165px;
   color: #ffffff;
+  z-index: 2;
 }
 
 .nav__nav-links {
@@ -47,6 +48,15 @@
   background-color: #d87d4a;
 }
 
+/* Mobile */
+
+.nav__mobile-wrapper {
+  position: relative;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .nav__mobile--menu {
   display: none;
   align-items: center;
@@ -59,4 +69,31 @@
 
 .fa-bars {
   font-size: 20px;
+}
+
+.nav__mask {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.nav__mobile {
+  position: relative;
+  margin: 0px 0px;
+  padding: 96px 39px 67px 40px;
+  width: 100%;
+  height: 340px;
+  background-color: #fff;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  right: 0%;
+  z-index: 2;
 }

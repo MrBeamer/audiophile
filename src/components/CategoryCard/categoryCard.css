@@ -8,6 +8,7 @@
   height: 204px;
   border-radius: 8px;
   flex: 1;
+  color: #000000;
 }
 
 .category-card__image {
