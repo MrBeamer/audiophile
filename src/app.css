@@ -268,6 +268,10 @@ h6 {
     display: flex;
   }
 
+  .fa-bars {
+    display: block;
+  }
+
   .category-card__image {
     height: 104px;
   }
@@ -275,6 +279,25 @@ h6 {
   .category-card {
     height: 165px;
     width: 223px;
+  }
+
+  /* Category-Page */
+  .productCard {
+    grid-template-columns: 1fr;
+  }
+
+  .productCard__content {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .productCard__image-frame {
+    width: 689px;
+    height: 352px;
+  }
+
+  .productCard__content p {
+    width: 572px;
   }
 }
 

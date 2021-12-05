@@ -58,17 +58,13 @@
 }
 
 .nav__mobile--menu {
-  display: none;
   align-items: center;
   gap: 42px;
 }
 
-.nav__mobile--menu.collapsed {
-  display: none;
-}
-
 .fa-bars {
   font-size: 20px;
+  display: none;
 }
 
 .nav__mask {

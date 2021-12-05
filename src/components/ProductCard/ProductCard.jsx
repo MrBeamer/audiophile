@@ -9,7 +9,6 @@ import QuantityButton from "../Button/QuantityButton";
 export default function ProductCard(props) {
   const {
     linkTo,
-    styles = "",
     detailPage = false,
     onProductAdd = () => {},
     onProductQuantityChange,
@@ -17,16 +16,30 @@ export default function ProductCard(props) {
     product,
   } = props;
 
-  const customStyles = styles
-    ? { right: { gridColumn: "2" }, left: { gridColumn: "1", gridRow: "1" } }
-    : {};
+  const windowSize = window.matchMedia("(min-width: 770px)");
+  let customStyles = "";
+  if (windowSize.matches) {
+    customStyles =
+      product.position === "mirrored"
+        ? {
+            right: { gridColumn: "2" },
+            left: { gridColumn: "1", gridRow: "1" },
+          }
+        : {};
+  }
 
   return (
     <div className="productCard">
       <div style={customStyles.right} className="productCard__image-frame">
         <img
-          className="productCard__image"
+          className="productCard__image desktop-image"
           src={product.image?.product}
+          alt={`${product.name} ${product.category}`}
+        />
+
+        <img
+          className="productCard__image tablet-image "
+          src={product.image?.productTablet}
           alt={`${product.name} ${product.category}`}
         />
       </div>

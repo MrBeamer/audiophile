@@ -47,7 +47,10 @@ export default function Navigation(props) {
       </nav>
       {context.isShowing.navbar ? (
         <>
-          <div className="nav__mask animate__animated animate__fadeIn"></div>
+          <div
+            className="nav__mask animate__animated animate__fadeIn"
+            onClick={() => context.toggleModal("navbar")}
+          ></div>
           <nav className="nav__mobile-wrapper animate__animated animate__fadeIn">
             <div className="nav__mobile">
               <CategoryCards></CategoryCards>

@@ -8,11 +8,8 @@ import products from "../products.json";
 
 export default function CategoryPage() {
   const params = useParams();
-  // const [category, setCategory] = useState([]);
   const category = products[params.category];
-  // console.log(category);
-  // console.log(typeof category);
-  // console.log(typeof category);
+
   // useEffect(() => {
   //   //use square brackets to access property of an object with a string/ dynamic variable
   //   setCategory(products[params.category]);
@@ -24,7 +21,6 @@ export default function CategoryPage() {
         {category.map((product) => (
           <ProductCard
             key={product.id}
-            styles={product.position === "mirrored" ? "mirrored" : ""}
             linkTo={`/${params.category}/${product.name.split(` `).join(`-`)}`}
             product={product}
           />
