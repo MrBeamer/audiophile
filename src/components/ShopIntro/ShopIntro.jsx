@@ -31,6 +31,12 @@ export default function ShopIntro(props) {
           src="/images/shared/tablet/image-best-gear.jpg"
           alt="Man wears black headphones"
         />
+
+        <img
+          className="intro__image mobile-image"
+          src="/images/shared/mobile/image-best-gear.jpg"
+          alt="Man wears black headphones"
+        />
       </div>
     </div>
   );

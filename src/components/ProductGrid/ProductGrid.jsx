@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./productGrid.css";
 import Button from "../Button/Button";
 
 export default function ProductGrid() {
-  const [screenSize, setScreenSize] = useState("");
+  // const [screenSize, setScreenSize] = useState("");
 
-  const tabletScreen = window.matchMedia("(max-width: 1185px)");
-  const mobileScreen = window.matchMedia("(max-width: 416px)");
+  // const tabletScreen = window.matchMedia("(max-width: 1185px)");
+  // const mobileScreen = window.matchMedia("(max-width: 416px)");
 
-  useEffect(() => {
-    if (mobileScreen.matches) {
-      setScreenSize("mobile");
-    } else if (tabletScreen.matches) {
-      setScreenSize("tablet");
-    } else {
-      setScreenSize("desktop");
-    }
-  }, [mobileScreen.matches, tabletScreen.matches, screenSize]);
+  // useEffect(() => {
+  //   if (mobileScreen.matches) {
+  //     setScreenSize("mobile");
+  //   } else if (tabletScreen.matches) {
+  //     setScreenSize("tablet");
+  //   } else {
+  //     setScreenSize("desktop");
+  //   }
+  // }, [mobileScreen.matches, tabletScreen.matches, screenSize]);
 
   return (
     <div className="product-grid">
@@ -24,7 +24,7 @@ export default function ProductGrid() {
         <div className="product-ZX9__container">
           <img
             className="product-ZX9__image desktop-image"
-            src={`/images/home/${screenSize}/image-speaker-zx9.png`}
+            src={`/images/home/desktop/image-speaker-zx9.png`}
             alt="ZX9 Speaker"
           />
           <img

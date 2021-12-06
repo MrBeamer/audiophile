@@ -295,6 +295,14 @@ h6 {
     margin: 0 24px;
   }
 
+  .mobile-image {
+    display: block;
+  }
+
+  .tablet-image {
+    display: none !important;
+  }
+
   .logo {
   }
 
@@ -388,6 +396,14 @@ h6 {
     height: 200px;
   }
 
+  .intro__content h2 {
+    /* width: 327px !important; */
+    font-size: 28px !important;
+    line-height: 38px !important;
+    letter-spacing: 1px !important;
+    /* need to fix important */
+  }
+
   /* Footer */
 
   footer {
@@ -415,7 +431,14 @@ h6 {
     grid-column: 1;
   }
 
-  .intro__content h2 {
-    /* font-size: 28px !important; */
+  /* category page */
+
+  .productCard__image-frame {
+    width: 327px;
+    height: 352px;
+  }
+
+  .productCard__content p {
+    width: 327px;
   }
 }

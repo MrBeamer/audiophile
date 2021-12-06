@@ -42,7 +42,14 @@ export default function ProductCard(props) {
           src={product.image?.productTablet}
           alt={`${product.name} ${product.category}`}
         />
+
+        <img
+          className="productCard__image mobile-image "
+          src={product.image?.productMobile}
+          alt={`${product.name} ${product.category}`}
+        />
       </div>
+
       <div style={customStyles.left} className="productCard__content">
         <Overline />
         <ProductHeadline>{`${product.name} ${product.category}`}</ProductHeadline>
