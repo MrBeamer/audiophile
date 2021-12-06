@@ -1,0 +1,34 @@
+.productDetail__features {
+  display: flex;
+  margin-bottom: 180px;
+  gap: 125px;
+}
+
+.productDetail__features--headline {
+  margin: 0 0 32px 0;
+  opacity: 1;
+}
+
+.accessories {
+  justify-self: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: min-content;
+}
+
+.accessories__element {
+  display: flex;
+  gap: 24px;
+}
+
+.accessories__title {
+  margin-bottom: 32px;
+}
+
+.accessories__quantity {
+  color: #d87d4a;
+}
+
+.accessories_name {
+  opacity: 0.5;
+}

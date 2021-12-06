@@ -8,7 +8,7 @@ export default function CategoryCard(props) {
     <div className="category-card">
       <img className="category-card__image" src={imagePath} alt="headphones" />
       <h6 className="category-card__title">{title}</h6>
-      <div>
+      <div className="category-card__link-wrapper">
         <Link to={`/${title}`} className="category-card__link">
           Shop
         </Link>

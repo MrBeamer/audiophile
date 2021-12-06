@@ -10,10 +10,6 @@ export default function CategoryPage() {
   const params = useParams();
   const category = products[params.category];
 
-  // useEffect(() => {
-  //   //use square brackets to access property of an object with a string/ dynamic variable
-  //   setCategory(products[params.category]);
-  // }, [params.category]);
   return (
     <>
       <CategoryBanner title={params.category} />

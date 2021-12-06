@@ -84,7 +84,7 @@
   margin: 0px 0px;
   padding: 96px 39px 67px 40px;
   width: 100%;
-  height: 340px;
+  height: fit-content;
   background-color: #fff;
   position: absolute;
   left: 0%;

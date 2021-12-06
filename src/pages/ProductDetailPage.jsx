@@ -7,6 +7,8 @@ import Paragraph from "../components/TextElements/Paragraph";
 import ShopIntro from "../components/ShopIntro/ShopIntro";
 import ProductGallery from "../components/ProductGallery/ProductGallery";
 import Recommendation from "../components/Recommendation/Recommendation";
+import Accessories from "../components/Accessories/Accessories";
+
 import products from "../products.json";
 
 export default function ProductDetailPage(props) {
@@ -35,33 +37,11 @@ export default function ProductDetailPage(props) {
       />
 
       <div className="productDetail__features">
-        <div>
-          <h3>Features</h3>
-          <Paragraph>{product.features}</Paragraph>
-        </div>
-        <div className="accessories">
-          <h3 className="accessories__title">In the box</h3>
-          <div className="accessories__element">
-            <p className="accessories__quantity">1x</p>
-            <p className="accessories_name">Headphone Unit</p>
-          </div>
-          <div className="accessories__element">
-            <p className="accessories__quantity"> 2x</p>
-            <p className="accessories_name">Replacement Earcups</p>
-          </div>
-          <div className="accessories__element">
-            <p className="accessories__quantity">1x</p>
-            <p className="accessories_name">User Manual</p>
-          </div>
-          <div className="accessories__element">
-            <p className="accessories__quantity">1x</p>
-            <p className="accessories_name">3.5mm 5m Audio Cable</p>
-          </div>
-          <div className="accessories__element">
-            <p className="accessories__quantity">1x</p>
-            <p className="accessories_name">Travel Bag</p>
-          </div>
-        </div>
+        {/* <h3 className="productDetail__features--headline">Features</h3> */}
+        <Paragraph maxWidth={"635px"} margin={"0 0 0 0"}>
+          {product.features}
+        </Paragraph>
+        <Accessories></Accessories>
       </div>
       <ProductGallery product={product} />
       <Recommendation />

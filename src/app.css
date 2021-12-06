@@ -39,85 +39,54 @@ footer {
 }
 
 /* Headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
 
 h1 {
-  text-transform: uppercase;
-  font-size: 56px;
-  font-style: normal;
+  font-size: 3.5rem;
   font-weight: 700;
-  line-height: 58px;
+  line-height: 3.625rem;
   letter-spacing: 2px;
 }
 
 h2 {
-  font-size: 40px;
-  text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
 h3 {
   color: #000000;
-  font-style: normal;
   font-weight: bold;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 2rem;
+  line-height: 2.25rem;
   letter-spacing: 1.14286px;
-  text-transform: uppercase;
 }
 
 h4 {
-  font-size: 28px;
-  text-transform: uppercase;
+  font-size: 1.75rem;
 }
 
 h5 {
-  font-size: 24px;
-  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-style: normal;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 1.3px;
 }
 
 .overline {
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 10px;
-}
-
-/* needs on place or file html code is in productHeadphones page */
-.productDetail__features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 180px;
-}
-
-.accessories {
-  justify-self: center;
-  margin-top: 10px;
-}
-
-.accessories__element {
-  display: flex;
-  gap: 24px;
-}
-
-.accessories__title {
-  margin-bottom: 32px;
-}
-
-.accessories__quantity {
-  color: #d87d4a;
-}
-
-.accessories_name {
-  opacity: 0.5;
 }
 
 /* Animations */
@@ -128,9 +97,13 @@ h6 {
   display: none;
 }
 
-/* Media queries */
+.mobile-image {
+  display: none;
+}
 
-@media only screen and (max-width: 769px) {
+/* Media queries */
+/* 769px */
+@media only screen and (max-width: 1185px) {
   /* General */
 
   .container {
@@ -299,10 +272,150 @@ h6 {
   .productCard__content p {
     width: 572px;
   }
+
+  /* Product-Page */
+
+  .container--productDetail {
+    margin: 160px 40px 0 40px;
+  }
+
+  .productDetail__features {
+    flex-direction: column;
+  }
+
+  .accessories {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@media only screen and (max-width: 375px) {
+/* 375px */
+/* 415px */
+@media only screen and (max-width: 415px) {
   .container {
-    margin: 55px 20px;
+    margin: 0 24px;
+  }
+
+  .logo {
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .tablet-image {
+    display: block;
+  }
+
+  /* Navigation */
+  .nav {
+    margin: 0 40px;
+  }
+
+  .nav__mobile {
+    padding: 96px 24px 35px 24px;
+    /* margin-bottom: 22px; */
+  }
+
+  /* Home-Banner */
+
+  html {
+    font-size: 10px;
+  }
+
+  .home-banner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 0;
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+  }
+
+  .home-banner__content {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-banner__content p {
+    width: 328px;
+  }
+
+  .home-banner__image {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+  }
+
+  .home-banner__image {
+    max-width: 356px;
+  }
+
+  .home-banner__title {
+  }
+
+  /* Category  */
+
+  .category-cards {
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .category-card {
+    width: 100%;
+    height: 217px;
+  }
+
+  .product-YX1 {
+    height: 320px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+  }
+
+  .product-ZX7 {
+    background-image: url("/src/assets/image-speaker-zx7-mobile.jpg");
+  }
+
+  .product-YX1__image {
+    background-image: url("/src/assets/image-earphones-yx1-mobile.jpg");
+    height: 200px;
+  }
+
+  .product-YX1__content {
+    height: 200px;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 645px;
+  }
+
+  .footer {
+    padding: 52px 24px 38px 24px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer__paragraph {
+    width: 327px;
+  }
+
+  .footer__social-links {
+    grid-row: 5;
+    grid-column: 1;
+  }
+
+  .intro__content h2 {
+    /* font-size: 28px !important; */
   }
 }

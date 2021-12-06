@@ -38,6 +38,10 @@
   margin-right: 8px;
 }
 
+.category-card__link-wrapper {
+  margin-bottom: 22px;
+}
+
 .category-card__link:hover {
   color: #d87d4a;
   opacity: 1;
