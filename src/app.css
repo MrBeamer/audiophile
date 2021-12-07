@@ -543,4 +543,66 @@ h6 {
   .recommendation__title {
     font-size: 24px;
   }
+
+  /* Cart */
+  .cart {
+    top: 1.8%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  /* Checkout-Page */
+  .container--checkout {
+    padding: 65px 24px 97px 24px;
+  }
+
+  .checkout {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .form {
+    max-width: 327px;
+    padding: 24px 24px;
+  }
+
+  .form__shipping-info,
+  .form__billing,
+  .form__payment {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    padding: 24px 24px;
+  }
+
+  .form__input,
+  .form__payment-option {
+    width: 100%;
+  }
+
+  .conformation {
+    width: 327px;
+    padding: 32px;
+  }
+
+  .conformation_overview {
+    grid-template-columns: 1fr;
+    margin: 33px 0 46px 0;
+  }
+
+  .conformation__total {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .conformation__items {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .conformation__icon {
+    width: 48px;
+  }
 }
