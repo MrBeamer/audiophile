@@ -22,7 +22,6 @@ export default function ProductDetailPage(props) {
     const currentProduct = category.find(
       (product) => product.name.split(" ").join("-") === productName
     );
-    // console.log(currentProduct);
     setProduct(currentProduct);
   }, [category, productName]);
 
@@ -37,7 +36,7 @@ export default function ProductDetailPage(props) {
       />
 
       <div className="productDetail__features">
-        {/* <h3 className="productDetail__features--headline">Features</h3> */}
+        <h3 className="productDetail__features--headline">Features</h3>
         <Paragraph maxWidth={"635px"} margin={"0 0 0 0"}>
           {product.features}
         </Paragraph>
