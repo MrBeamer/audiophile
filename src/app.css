@@ -653,7 +653,7 @@ h6 {
   }
 
   .form {
-    max-width: 327px;
+    max-width: 100%;
     padding: 24px 24px;
   }
 
