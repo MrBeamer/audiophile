@@ -423,9 +423,6 @@ h6 {
     max-width: 356px;
   }
 
-  .home-banner__title {
-  }
-
   /* Category  */
 
   .category-banner {
@@ -436,6 +433,8 @@ h6 {
   .category-cards {
     flex-direction: column;
     gap: 56px;
+    margin-bottom: 120px !important;
+    /* needs a fix passed style  */
   }
 
   .category-card {
@@ -443,8 +442,12 @@ h6 {
     height: 217px;
   }
 
+  .product-grid {
+    grid-gap: 24px;
+  }
+
   .product-YX1 {
-    height: 320px;
+    height: min-content;
     grid-template-columns: 1fr;
     grid-row-gap: 24px;
   }
@@ -540,6 +543,10 @@ h6 {
 
   .productCard {
     gap: 32px;
+    margin-bottom: 120px;
+  }
+
+  .container--productDetail .productCard {
     margin-bottom: 88px;
   }
 
