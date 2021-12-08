@@ -300,11 +300,12 @@ h6 {
   .productGallery {
     margin-bottom: 120px;
     grid-row-gap: 20px;
+    grid-column-gap: 18px;
   }
 
   .productGallery__img--1,
   .productGallery__img--2 {
-    width: 277px;
+    width: 100%;
     height: 174px;
   }
 
@@ -334,7 +335,7 @@ h6 {
   }
 
   .form {
-    width: 689px;
+    max-width: 100%;
     padding: 24px 24px;
   }
 

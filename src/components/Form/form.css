@@ -1,6 +1,6 @@
 .form {
   background-color: #fff;
-  width: 730px;
+  max-width: 730px;
   height: auto;
   padding: 48px 48px;
 }
@@ -42,7 +42,7 @@
   border: 1px solid #cfcfcf;
   box-sizing: border-box;
   border-radius: 8px;
-  width: 309px;
+  width: 100%;
   height: 56px;
   padding-left: 24px;
   font-weight: 700;
