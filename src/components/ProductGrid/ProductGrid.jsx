@@ -32,6 +32,12 @@ export default function ProductGrid() {
             src="images/home/tablet/image-speaker-zx9.png"
             alt="ZX9 Speaker"
           />
+
+          <img
+            className="product-ZX9__image mobile-image"
+            src="images/home/mobile/image-speaker-zx9.png"
+            alt="ZX9 Speaker"
+          />
           <img
             className="product-ZX9__circles"
             src="/images/home/desktop/pattern-circles.svg"

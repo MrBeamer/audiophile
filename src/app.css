@@ -458,6 +458,16 @@ h6 {
     height: 200px;
   }
 
+  .product-ZX9__image.mobile-image {
+    max-width: 172px;
+  }
+
+  .product-ZX9__circles {
+    top: -177px;
+    left: -194px;
+    max-width: 569px;
+  }
+
   .product-YX1__content {
     height: 200px;
   }

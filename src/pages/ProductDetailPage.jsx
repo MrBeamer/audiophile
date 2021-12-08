@@ -8,7 +8,6 @@ import ShopIntro from "../components/ShopIntro/ShopIntro";
 import ProductGallery from "../components/ProductGallery/ProductGallery";
 import Recommendation from "../components/Recommendation/Recommendation";
 import Accessories from "../components/Accessories/Accessories";
-
 import products from "../products.json";
 
 export default function ProductDetailPage(props) {
