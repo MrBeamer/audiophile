@@ -16,7 +16,8 @@ export default function ProductCard(props) {
     product,
   } = props;
 
-  const windowSize = window.matchMedia("(min-width: 770px)");
+  // 770px old value
+  const windowSize = window.matchMedia("(min-width: 1025px)");
   let customStyles = "";
   if (windowSize.matches) {
     customStyles =

@@ -265,8 +265,8 @@ h6 {
   }
 
   .productCard__image-frame {
-    width: 689px;
-    height: 352px;
+    width: 100%;
+    height: min-content;
   }
 
   .productCard__content p {
@@ -500,8 +500,8 @@ h6 {
   /* category page */
 
   .productCard__image-frame {
-    width: 327px;
-    height: 352px;
+    width: 100%;
+    height: min-content;
   }
 
   .productCard__content p {
