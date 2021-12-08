@@ -326,6 +326,26 @@ h6 {
   .cart {
     right: 49px;
   }
+
+  /* Checkout Page */
+
+  .container--checkout {
+    padding: 97px 40px 116px 40px;
+  }
+
+  .form {
+    width: 689px;
+    padding: 24px 24px;
+  }
+
+  .checkout {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .summary {
+    max-width: 100%;
+  }
 }
 
 /* 375px */
