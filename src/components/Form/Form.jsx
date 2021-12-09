@@ -168,7 +168,7 @@ export default function Form(props) {
       </div>
       {formik.values.payment === "cash" && (
         <div className="form__cash-info">
-          <img src="/images/pay.svg" alt="hands and money" />
+          <img src="/images/shared/pay.svg" alt="hands and money" />
           <Paragraph margin="0">
             The ‘Cash on Delivery’ option enables you to pay in cash when our
             delivery courier arrives at your residence. Just make sure your

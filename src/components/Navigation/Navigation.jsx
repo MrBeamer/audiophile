@@ -1,16 +1,14 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../Logo/Logo";
+import { CategoryCards, Logo, ModalContext } from "../";
 import "./navigation.css";
-import CategoryCards from "../CategoryCards/CategoryCards";
 import "animate.css";
-import { ModalContext } from "../context/modalContext";
 
 export default function Navigation(props) {
   const context = useContext(ModalContext);
   const { cart } = props;
   const sumQuantity = cart?.reduce((sum, product) => sum + product.quantity, 0);
-  console.log(context.isShowing.navbar);
+
   return (
     <>
       <nav className="nav">
@@ -41,7 +39,7 @@ export default function Navigation(props) {
         <img
           className="nav__cart-icon"
           onClick={() => context.toggleModal("cart")}
-          src="/images/icon-cart.svg"
+          src="/images/shared/icon-cart.svg"
           alt="shopping-cart icon"
         />
       </nav>

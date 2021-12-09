@@ -11,14 +11,11 @@
   top: 128px;
   right: 163px;
   width: 377px;
-  /* height: 488px; */
   background-color: #fff;
   display: grid;
-  /* justify-items: space-between; */
   padding: 31px 32px;
   z-index: 10;
   grid-row-gap: 20px;
-  /* grid-template-rows: repeat(auto-fill, 1fr); t*/
 }
 
 .cart__empty {
@@ -82,9 +79,6 @@
 
 .cart__total--title {
   opacity: 0.5;
-}
-
-.cart__total {
 }
 
 .cart__total--price {

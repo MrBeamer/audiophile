@@ -1,9 +1,7 @@
 import React, { useContext, useState } from "react";
-import "./orderConformation.css";
-import Button from "../Button/Button";
-import { ModalContext } from "../context/modalContext";
+import { Button, Paragraph, ModalContext } from "../";
 import { sumCart } from "../helpers";
-import Paragraph from "../TextElements/Paragraph";
+import "./orderConformation.css";
 import "animate.css";
 
 export default function OrderConformation(props) {
@@ -29,7 +27,7 @@ export default function OrderConformation(props) {
             </h3>
             <img
               className="conformation__icon"
-              src="/images/complete.svg"
+              src="/images/shared/complete.svg"
               alt="complete icon"
             />
           </div>

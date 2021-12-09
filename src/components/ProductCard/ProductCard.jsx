@@ -1,10 +1,12 @@
 import React from "react";
+import {
+  Button,
+  Paragraph,
+  QuantityButton,
+  Overline,
+  ProductHeadline,
+} from "../";
 import "./productCard.css";
-import Overline from "../TextElements/Overline";
-import ProductHeadline from "../TextElements/ProductHeadline";
-import Paragraph from "../TextElements/Paragraph";
-import Button from "../Button/Button";
-import QuantityButton from "../Button/QuantityButton";
 
 export default function ProductCard(props) {
   const {
@@ -16,22 +18,9 @@ export default function ProductCard(props) {
     product,
   } = props;
 
-  // 770px old value
-  const windowSize = window.matchMedia("(min-width: 1025px)");
-  let customStyles = "";
-  if (windowSize.matches) {
-    customStyles =
-      product.position === "mirrored"
-        ? {
-            right: { gridColumn: "2" },
-            left: { gridColumn: "1", gridRow: "1" },
-          }
-        : {};
-  }
-
   return (
     <div className="productCard">
-      <div style={customStyles.right} className="productCard__image-frame">
+      <div className="productCard__image-frame">
         <img
           className="productCard__image desktop-image"
           src={product.image?.product}
@@ -51,8 +40,8 @@ export default function ProductCard(props) {
         />
       </div>
 
-      <div style={customStyles.left} className="productCard__content">
-        <Overline />
+      <div className="productCard__content">
+        <Overline color="orange" />
         <ProductHeadline>{`${product.name} ${product.category}`}</ProductHeadline>
         <Paragraph margin="32px 0 38px 0">{product.description}</Paragraph>
         {detailPage && (

@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
+import { QuantityButton, Button, ModalContext, sumCart } from "../";
 import "./cart.css";
-import QuantityButton from "../Button/QuantityButton";
-import Button from "../Button/Button";
-import { ModalContext } from "../context/modalContext";
-import { sumCart } from "../helpers";
 import "animate.css";
 
 export default function Cart(props) {
