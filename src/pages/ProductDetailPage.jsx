@@ -33,9 +33,8 @@ export default function ProductDetailPage(props) {
         onProductQuantityChange={onProductQuantityChange}
         quantity={quantity}
       />
-
+      <h3 className="productDetail__features--headline">Features</h3>
       <div className="productDetail__features">
-        <h3 className="productDetail__features--headline">Features</h3>
         <Paragraph maxWidth={"635px"} margin={"0 0 0 0"}>
           {product.features}
         </Paragraph>

@@ -5,3 +5,6 @@
 5. remove smooth scrolling?
 6. empty cart after conformation
 7. save cart in local storage
+   fix left and right align
+   every second element maybe category page
+   refactoring

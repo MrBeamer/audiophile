@@ -1,7 +1,6 @@
 import React from "react";
-import Paragraph from "../TextElements/Paragraph";
+import { Paragraph, ProductHeadline } from "../";
 import "./shopIntro.css";
-import ProductHeadline from "../TextElements/ProductHeadline";
 
 export default function ShopIntro(props) {
   const { styles = { margin: "160px 0" } } = props;

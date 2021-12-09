@@ -2,8 +2,7 @@ import React from "react";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import "./categoryCards.css";
 
-export default function CategoryCards(props) {
-  const { style } = props;
+export default function CategoryCards({ style }) {
   return (
     <div style={style} className="category-cards">
       <CategoryCard

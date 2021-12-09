@@ -30,7 +30,6 @@
 
     {
       "id": 2,
-      "position": "mirrored",
       "name": "xx99 mark ii",
       "shortName": "xx99 mk ii",
       "category": "headphones",
@@ -147,7 +146,6 @@
 
     {
       "id": 5,
-      "position": "mirrored",
       "name": "zx7",
       "shortName": "zx7",
       "category": "speaker",

@@ -5,6 +5,16 @@
   margin-bottom: 160px;
 }
 
+/* mirrors every second product card */
+.productCard:nth-child(2n) .productCard__content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.productCard:nth-child(2n) .productCard__image-frame {
+  grid-column: 2;
+}
+
 .productCard__image-frame {
   width: 540px;
   height: 560px;

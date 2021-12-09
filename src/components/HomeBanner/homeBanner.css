@@ -3,7 +3,6 @@
   grid-template-columns: 1fr 1fr;
   height: auto;
   background-color: #0e0e0e;
-
   padding: 0 121px 0 165px;
 }
 
@@ -11,9 +10,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  /* margin: 128px 0 158px 165px; */
   max-width: 398px;
-
   margin: 128px 0 158px 0;
 }
 
@@ -23,5 +20,4 @@
 
 .home-banner__image {
   max-width: 709px;
-  /* max-width: 100%; */
 }

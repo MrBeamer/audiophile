@@ -2,7 +2,6 @@ import { React } from "react";
 
 export default function QuantityButton(props) {
   const { onProductQuantityChange, quantity = "1", children, ...rest } = props;
-  // const [quantity, setQuantity] = useState(1);
 
   return (
     <div className="quantity-button">

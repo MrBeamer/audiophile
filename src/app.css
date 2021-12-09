@@ -259,6 +259,12 @@ h6 {
     grid-template-columns: 1fr;
   }
 
+  .productCard:nth-child(2n) .productCard__content,
+  .productCard:nth-child(2n) .productCard__image-frame {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
   .productCard__content {
     text-align: center;
     justify-items: center;
@@ -287,10 +293,6 @@ h6 {
   .productDetail__features {
     flex-direction: column;
     margin-bottom: 152px;
-  }
-
-  .productDetail__features--headline {
-    margin-bottom: -93px;
   }
 
   .accessories {
@@ -522,6 +524,12 @@ h6 {
     width: 327px;
   }
 
+  .productCard:nth-child(2n) .productCard__content,
+  .productCard:nth-child(2n) .productCard__image-frame {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
   /* Product-Page */
 
   .container--productDetail .productCard__content {
@@ -536,10 +544,6 @@ h6 {
   .productDetail__features {
     gap: 88px;
     margin-bottom: 121px;
-  }
-
-  .productDetail__features--headline {
-    margin-bottom: -64px;
   }
 
   .productCard {
