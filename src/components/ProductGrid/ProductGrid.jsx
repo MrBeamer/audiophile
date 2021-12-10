@@ -1,23 +1,8 @@
 import React from "react";
+import { Button } from "../";
 import "./productGrid.css";
-import Button from "../Button/Button";
 
 export default function ProductGrid() {
-  // const [screenSize, setScreenSize] = useState("");
-
-  // const tabletScreen = window.matchMedia("(max-width: 1185px)");
-  // const mobileScreen = window.matchMedia("(max-width: 416px)");
-
-  // useEffect(() => {
-  //   if (mobileScreen.matches) {
-  //     setScreenSize("mobile");
-  //   } else if (tabletScreen.matches) {
-  //     setScreenSize("tablet");
-  //   } else {
-  //     setScreenSize("desktop");
-  //   }
-  // }, [mobileScreen.matches, tabletScreen.matches, screenSize]);
-
   return (
     <div className="product-grid">
       <div className="product-ZX9">

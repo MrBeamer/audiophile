@@ -20,18 +20,5 @@ export default function Paragraph(props) {
     margin: margin,
   };
 
-  // const customClass = clsx({
-  //   "paragraph--banner": width === "small",
-  //   "paragraph--product": width === "small",
-  //   "paragraph--features": width === "medium",
-  // });
-
-  // do you pass styles as props ??
-  //349 banner text
-  //444 confirmation text
-  //445 product text
-  //445 info text
-  //635 features text
-
   return <p style={styles}>{children}</p>;
 }

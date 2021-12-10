@@ -3,7 +3,6 @@ export { default as QuantityButton } from "./Button/QuantityButton";
 export { default as Paragraph } from "./TextElements/Paragraph";
 export { default as Overline } from "./TextElements/Overline";
 export { default as ProductHeadline } from "./TextElements/ProductHeadline";
-
 export { default as CategoryCards } from "./CategoryCards/CategoryCards";
 export { default as Logo } from "./Logo/Logo";
 export { default as Cart } from "./Cart/Cart";

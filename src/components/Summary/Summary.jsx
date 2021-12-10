@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
+import { ModalContext, sumCart } from "../";
 import "./summary.css";
-import { ModalContext } from "../context/modalContext";
-import { sumCart } from "../helpers";
 
 export default function Summary(props) {
   const context = useContext(ModalContext);
