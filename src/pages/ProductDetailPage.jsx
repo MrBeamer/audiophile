@@ -47,5 +47,3 @@ export default function ProductDetailPage(props) {
     </div>
   );
 }
-
-// fix the product gallery and the in the box components

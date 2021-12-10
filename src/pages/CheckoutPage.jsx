@@ -1,7 +1,6 @@
 import React from "react";
-import Summary from "../components/Summary/Summary";
-import Form from "../components/Form/Form";
 import { useFormik } from "formik";
+import { Summary, Form } from "../components";
 import "animate.css";
 
 export default function CheckoutPage(props) {

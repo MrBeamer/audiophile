@@ -8,3 +8,4 @@
    fix left and right align
    every second element maybe category page
    refactoring
+8. add dynamic box and recommendation link missing on the buttons

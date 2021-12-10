@@ -1,10 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CategoryBanner from "../components/CategoryBanner/CategoryBanner";
-import ProductCard from "../components/ProductCard/ProductCard";
-import CategoryCards from "../components/CategoryCards/CategoryCards";
-import ShopIntro from "../components/ShopIntro/ShopIntro";
 import products from "../products.json";
+import {
+  CategoryBanner,
+  ProductCard,
+  CategoryCards,
+  ShopIntro,
+} from "../components";
 
 export default function CategoryPage() {
   const params = useParams();
