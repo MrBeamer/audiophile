@@ -1,14 +1,15 @@
 import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-import ProductCard from "../components/ProductCard/ProductCard";
-import CategoryCards from "../components/CategoryCards/CategoryCards";
-import Paragraph from "../components/TextElements/Paragraph";
-import ShopIntro from "../components/ShopIntro/ShopIntro";
-import ProductGallery from "../components/ProductGallery/ProductGallery";
-import Recommendation from "../components/Recommendation/Recommendation";
-import Accessories from "../components/Accessories/Accessories";
 import products from "../products.json";
+import {
+  ProductCard,
+  CategoryCards,
+  Paragraph,
+  ShopIntro,
+  ProductGallery,
+  Recommendation,
+  Accessories,
+} from "../components";
 
 export default function ProductDetailPage(props) {
   const params = useParams();
