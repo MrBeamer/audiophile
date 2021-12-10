@@ -39,7 +39,7 @@ export default function ProductDetailPage(props) {
         <Paragraph maxWidth={"635px"} margin={"0 0 0 0"}>
           {product.features}
         </Paragraph>
-        <Accessories></Accessories>
+        <Accessories product={product}></Accessories>
       </div>
       <ProductGallery product={product} />
       <Recommendation />
