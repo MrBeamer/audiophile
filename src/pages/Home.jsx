@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <HomeBanner />
       <div className="container">
-        <CategoryCards style={{ marginTop: "120px", marginBottom: "168px" }} />
+        <CategoryCards style={{ marginTop: "175px", marginBottom: "168px" }} />
         <ProductGrid />
         <ShopIntro />
       </div>
