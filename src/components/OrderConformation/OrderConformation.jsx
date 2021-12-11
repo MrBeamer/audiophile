@@ -5,7 +5,7 @@ import "./orderConformation.css";
 import "animate.css";
 
 export default function OrderConformation(props) {
-  const { cart } = props;
+  let { cart, onRemoveAllProducts } = props;
   const [isExpanded, setIsExpanded] = useState(false);
   const context = useContext(ModalContext);
   const total = sumCart(cart);
@@ -83,7 +83,10 @@ export default function OrderConformation(props) {
             </div>
           </div>
           <Button
-            onClick={() => context.toggleModal("conformation")}
+            onClick={() => {
+              context.toggleModal("conformation");
+              onRemoveAllProducts(cart);
+            }}
             linkTo="/"
             style={{ width: "100%" }}
             backgroundColor="orange"

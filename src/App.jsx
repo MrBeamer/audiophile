@@ -101,7 +101,10 @@ function App() {
               />
               <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
             </Routes>
-            <OrderConformation cart={cart} />
+            <OrderConformation
+              cart={cart}
+              onRemoveAllProducts={handleRemoveAllProducts}
+            />
           </main>
           <footer>
             <Footer></Footer>
