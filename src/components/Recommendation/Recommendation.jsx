@@ -68,7 +68,14 @@ export default function Recommendation() {
               alt={`${product.name} ${product.category} `}
             />
             <p className="recommendation__product-name">{product.name}</p>
-            <Button backgroundColor="orange">See Product</Button>
+            <Button
+              linkTo={`/${
+                product.category === "speaker" ? "speakers" : product.category
+              }/${product.name.split(` `).join(`-`)}`}
+              backgroundColor="orange"
+            >
+              See Product
+            </Button>
           </div>
         );
       })}
