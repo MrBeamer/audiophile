@@ -244,6 +244,10 @@ h6 {
     height: 104px;
   }
 
+  .category-cards {
+    margin: 110px 0 !important;
+  }
+
   .category-card {
     height: 165px;
     width: 223px;
@@ -428,6 +432,7 @@ h6 {
   .category-cards {
     flex-direction: column;
     gap: 56px;
+    margin-top: 70px !important;
     margin-bottom: 120px !important;
     /* needs a fix passed style  */
   }
