@@ -89,10 +89,6 @@ h6 {
   letter-spacing: 10px;
 }
 
-/* Animations */
-.animate__animated.animate__fadeIn {
-}
-
 .tablet-image {
   display: none;
 }
@@ -164,7 +160,6 @@ h6 {
   }
 
   .product-ZX9__content {
-    /* margin-top: 0; */
     display: grid;
     justify-items: center;
     margin-bottom: 64px;
@@ -365,9 +360,6 @@ h6 {
     display: none !important;
   }
 
-  .logo {
-  }
-
   .desktop-image {
     display: none;
   }
@@ -479,7 +471,6 @@ h6 {
   }
 
   .intro__content h2 {
-    /* width: 327px !important; */
     font-size: 28px !important;
     line-height: 38px !important;
     letter-spacing: 1px !important;
