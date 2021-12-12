@@ -410,7 +410,7 @@ h6 {
   }
 
   .home-banner__content p {
-    width: 328px;
+    max-width: 328px !important;
   }
 
   .home-banner__image {
@@ -697,10 +697,21 @@ h6 {
   .conformation__icon {
     width: 48px;
   }
+}
+@media only screen and (max-width: 333px) {
+  .container--productDetail {
+    margin: 65px 12px 0 12px;
+  }
 
-  @media only screen and (max-width: 333px) {
-    .container--productDetail {
-      margin: 65px 12px 0 12px;
-    }
+  .home-banner__image {
+    max-width: 310px;
+  }
+
+  .container {
+    margin: 0 12px;
+  }
+
+  .nav__mobile--menu {
+    gap: 28px;
   }
 }
