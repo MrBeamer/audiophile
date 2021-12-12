@@ -4,7 +4,7 @@ import { ModalContext, sumCart } from "../";
 import "./summary.css";
 
 export default function Summary(props) {
-  const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
+  const stripeLoadedPromise = loadStripe(`${process.env.REACT_APP_API_KEY}`);
   const context = useContext(ModalContext);
   const { cart, formik } = props;
 
