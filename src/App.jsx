@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { loadStripe } from "@stripe/stripe-js";
 import {
   Navigation,
   Cart,
@@ -12,7 +11,6 @@ import { Home, CategoryPage, ProductDetailPage, CheckoutPage } from "./pages";
 import { ModalProvider } from "./components/context/modalContext";
 import "./app.css";
 
-// const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
 function App() {
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);

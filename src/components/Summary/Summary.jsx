@@ -1,14 +1,37 @@
 import React, { useContext } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 import { ModalContext, sumCart } from "../";
 import "./summary.css";
 
 export default function Summary(props) {
+  const stripeLoadedPromise = loadStripe(process.env.REACT_APP_API_KEY);
   const context = useContext(ModalContext);
   const { cart, formik } = props;
 
   const vat = 0.2;
   const shipping = 50;
   const total = sumCart(cart);
+
+  const lineItems = cart.map((product) => {
+    return { price: product.price_id, quantity: product.quantity };
+  });
+
+  async function handlePayment(event) {
+    event.preventDefault();
+    const stripe = await stripeLoadedPromise;
+    try {
+      const result = await stripe.redirectToCheckout({
+        lineItems: lineItems,
+        mode: "payment",
+        successUrl: "https://audiophilee.netlify.app/",
+        cancelUrl: "https://audiophilee.netlify.app/",
+        customerEmail: formik.values.email,
+      });
+      console.log(result.error);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="summary">
@@ -58,7 +81,12 @@ export default function Summary(props) {
         disabled={
           !(formik.isValid && formik.dirty && formik.values.payment !== "")
         }
-        onClick={() => context.toggleModal("conformation")}
+        // onClick={() => context.toggleModal("conformation")}
+        onClick={
+          formik.values.payment === "credit"
+            ? handlePayment
+            : () => context.toggleModal("conformation")
+        }
       >
         Continue & Pay
       </button>
