@@ -81,7 +81,6 @@ export default function Summary(props) {
         disabled={
           !(formik.isValid && formik.dirty && formik.values.payment !== "")
         }
-        // onClick={() => context.toggleModal("conformation")}
         onClick={
           formik.values.payment === "credit"
             ? handlePayment
